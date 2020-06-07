@@ -1,13 +1,20 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="HandmadeMomMain">
+  	<view class="weui-tab">
+			<view class="weui-tab__panel">
+      <button open-type="getUserInfo"  bindgetuserinfo="getUserInfo">11</button>
+      <view class="userinfo">
+        <block wx:if="{{hasUserInfo || !canIUse}}">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+			</view>
+			<view class="weui-tabbar" bindtap="getUserInfo"  open-type="getUserInfo"  bindgetuserinfo="getUserInfo">
+				<view class="weui-tabbar__item">
+					<image src="../images/head_set.png" alt class="weui-tabbar__icon"></image>
+					<view class="weui-tabbar__label">我</view>
+				</view>
+			</view>
+		</view>
 </view>
