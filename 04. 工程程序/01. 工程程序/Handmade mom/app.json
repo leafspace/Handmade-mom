@@ -1,7 +1,5 @@
 {
   "pages": [
-    "pages/start/start",
-    "pages/shop/select",
     "pages/index/index",
     "pages/notice/index",
     "pages/notice/show",
@@ -39,7 +37,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
+    "navigationBarTitleText": "手工妈妈",
     "navigationBarTextStyle": "black",
     "onReachBottomDistance": 50
   },

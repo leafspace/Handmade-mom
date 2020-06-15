@@ -3,11 +3,13 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": false,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": false,
 		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
@@ -20,9 +22,7 @@
 			"outputPath": ""
 		},
 		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false,
-		"enhance": true,
-		"nodeModules": false
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.4",
