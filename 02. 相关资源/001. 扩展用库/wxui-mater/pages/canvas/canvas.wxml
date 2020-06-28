@@ -1,0 +1,6 @@
+<!--pages/canvas/canvas.wxml-->
+<view class="container sizing relative">
+  <canvas class='poster absolute' canvas-id='main' style='width:360px;height:640px;'></canvas>
+  <image src="{{canvasImg}}" mode="widthFix" show-menu-by-longpress='true'></image>
+  <text wx:if="{{canvasImg}}" class="f25 gray">长按保存</text>
+</view>

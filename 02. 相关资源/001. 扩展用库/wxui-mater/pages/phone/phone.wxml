@@ -1,0 +1,2 @@
+<!--pages/phone/phone.wxml-->
+<button class="f-32" open-type="getPhoneNumber" catchgetphonenumber="getPhoneNumber">授权手机号</button>

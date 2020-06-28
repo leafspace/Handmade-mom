@@ -1,0 +1,73 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<!-- 订单状态 -->
+<view class="order_status_address f-bg">
+  <view class="status flex sizing m-bg">
+    <text class="left flex-box f32 white">待付款</text>
+    <span class='iconfont iconshijian f50 white'></span>
+  </view>
+  <view class="address_wrap flex sizing">
+    <span class='iconfont iconshouhuodizhi f34 gray'></span>
+    <view class="right flex-box">
+      <view class="name black f32 bold"><text>可可</text><text>13856565656</text></view>
+      <view class="address f24 gray">安徽省合肥市蜀山区望江路69号</view>
+    </view>
+  </view>
+</view>
+<!-- 倒计时 -->
+<view class="time flex g-bg sizing" wx:if="{{time}}">
+  <view class="left flex-box f26 gray">剩余支付时间：{{time}}</view>
+  <view class="right t-c flex">
+    <view class="m-bg f26 white r5 m-b-b">付款</view>
+    <view class="g-bg f26 gray r5 m-b-b2" bindtap="cancelHandle">取消订单</view>
+  </view>
+</view>
+<!-- 商品 -->
+<view class="order_goods sizing f-bg">
+  <view class="tit f32 black b-b">电商</view>
+  <view class="goods_wrap">
+    <view class="item flex">
+      <image src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-24/5d60dd9ad0857.jpg"></image>
+      <view class="right flex-box sizing">
+        <view class="name f28 col-3">迷你喷雾</view>
+        <view class="attr f24 gray">小型+常温+常规辣</view>
+        <view class="price_num flex">
+          <view class="price col-m f30"><text class="rmb f22">￥</text>15.00</view>
+          <view class="num f28 gray">x1</view>
+        </view>
+      </view>
+    </view>
+    <view class="item flex">
+      <image src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-24/5d60dd9ad0857.jpg"></image>
+      <view class="right flex-box sizing">
+        <view class="name f28 col-3">迷你喷雾</view>
+        <view class="attr f24 gray">小型+常温+常规辣</view>
+        <view class="price_num flex">
+          <view class="price col-m f30"><text class="rmb f22">￥</text>15.00</view>
+          <view class="num f28 gray">x1</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="fee_row">
+    <view class="row flex f28 gray">
+      <text>费用</text>
+      <view class="right"><text class="rmb f22">￥</text>2.00</view>
+    </view>
+    <view class="row flex f28 gray">
+      <text>订单总价</text>
+      <view class="right"><text class="rmb f22">￥</text>2.00</view>
+    </view>
+    <view class="total_wrap flex">
+      <view class="discount f28 gray">已优惠<text class="rmb f22">￥</text>17.00</view>
+      <view class="total f28 col-m">小计<text class="rmb f22">￥</text><text class="f32">17.00</text></view>
+    </view>
+  </view>
+</view>
+<!-- 订单信息 -->
+<view class="order_info sizing f-bg">
+  <view class="tit f32 black b-b">订单信息</view>
+  <view class="row flex f28 gray"><text>订单编号</text><text>20190927101839365190</text></view>
+  <view class="row flex f28 gray"><text>创建时间</text><text>2019-09-27 10:18:40</text></view>
+  <view class="row flex f28 gray"><text>支付方式</text><text>余额支付</text></view>
+  <view class="row flex f28 gray"><text>支付金额</text><text>￥0.00</text></view>
+</view>

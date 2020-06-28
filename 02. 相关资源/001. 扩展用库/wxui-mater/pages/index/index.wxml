@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text>{{userInfo.nickName}}</text>
+  </block>
+</view>
+
+<view class="container">
+  <block wx:for="{{list}}" wx:key="id">
+    <navigator url="{{item.page}}" class="weui-cell weui-cell_access">
+      <view class="item">
+        <text>{{item.name}}</text>
+        <span class='iconfont iconxiangyoujiantou'></span>
+      </view>
+    </navigator>
+  </block>
+</view>
+

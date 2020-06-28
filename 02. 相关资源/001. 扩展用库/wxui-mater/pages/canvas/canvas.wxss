@@ -1,0 +1,7 @@
+/* pages/canvas/canvas.wxss */
+page{text-align: center;}
+.poster{margin: 30rpx auto;transform: translateX(-1100px);top: 30rpx;left: 30rpx;}
+
+.container{width: 100vw;overflow-x: hidden;padding: 30rpx 0;}
+.container image{display: block;width: 90%;margin: 0 auto;}
+.container text{display: block;margin: 20rpx auto;}

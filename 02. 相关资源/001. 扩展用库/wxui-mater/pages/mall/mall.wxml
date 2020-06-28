@@ -1,0 +1,49 @@
+<!--pages/mall/mall.wxml-->
+<view class="mall_wrap">
+  <!-- 搜索 -->
+  <view class="search flex f-bg sizing p-15">
+    <image src="/img/logo.png" mode="widthFix"></image>
+    <view class="search-wrap flex-box flex g-bg radius-50 sizing" bindtap='searchHandle'>
+      <span class='iconfont iconsousuo1 gray f30'></span>
+      <input class="flex-box f28" disabled="true" placeholder="搜索你喜欢的商品" placeholder-class="placeholder"></input>
+    </view>
+  </view>
+
+  <!-- 导航 -->
+  <scroll-view scroll-x="true" class="nav sizing f-bg gray flex">
+    <block wx:for="{{category_list}}" wx:key="this">
+      <view class="item f32 {{category == index ?'active':''}}" data-index="{{index}}" data-path="" bindtap="navHandle">{{item.name}}</view>
+    </block>
+  </scroll-view>
+
+  <!-- 轮播 -->
+  <view class="swiper_wrap">
+    <swiper class="swiper" autoplay="true" indicator-dots='true' indicator-color='rgba(255,255,255,.6)' indicator-active-color='#CD262F' circular='true'>
+      <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item.url}}" mode="widthFix" data-path="pages/mine/mine" bindtap="toPath"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 菜单 -->
+  <view class="menu flex t-c p-15">
+    <view class="flex-box" data-path="pages/mine/mine" bindtap="toPath">
+      <image class="radius-50" src="http://www.pinnoocle.net/static/index/img/banner1-min.jpg"></image>
+      <text class="f30 col-3">菜单一</text>
+    </view>
+    <view class="flex-box" data-path="pages/mine/mine" bindtap="toPath">
+      <image class="radius-50" src="http://www.pinnoocle.net/static/index/img/banner2-min.jpg"></image>
+      <text class="f30 col-3">菜单二</text>
+    </view>
+    <view class="flex-box" data-path="pages/mine/mine" bindtap="toPath">
+      <image class="radius-50" src="http://www.pinnoocle.net/static/index/img/banner3-min.jpg"></image>
+      <text class="f30 col-3">菜单三</text>
+    </view>
+    <view class="flex-box" data-path="pages/mine/mine" bindtap="toPath">
+      <image class="radius-50" src="http://www.pinnoocle.net/static/index/img/banner1-min.jpg"></image>
+      <text class="f30 col-3">菜单四</text>
+    </view>
+  </view>
+</view>

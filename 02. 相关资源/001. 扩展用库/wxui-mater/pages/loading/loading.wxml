@@ -1,0 +1,16 @@
+<!--pages/loading/loading.wxml-->
+<view class="popup_wrap t-c sizing p-30">
+  <button class="item f30 col-3" type='primary' bindtap="loadingHandle">loading1</button> 
+</view>
+
+<view class="loader" wx:if="{{loading}}" bindtap="loadingHandle">
+  <view class="dot_wrap">
+    <view class="dot dot1"><image src="/img/logo1.png" mode="widthFix"></image></view>
+    <view class="dot dot2"><image src="/img/logo2.png" mode="widthFix"></image></view>
+    <view class="dot dot3"><image src="/img/logo3.png" mode="widthFix"></image></view>
+    <view class="dot dot4"><image src="/img/logo4.png" mode="widthFix"></image></view>
+    <view class="dot dot5"><image src="/img/logo5.png" mode="widthFix"></image></view>
+    <view class="dot dot6"><image src="/img/logo6.png" mode="widthFix"></image></view>
+    <view class="dot dot7"><image src="/img/logo7.png" mode="widthFix"></image></view>
+  </view>
+</view> 

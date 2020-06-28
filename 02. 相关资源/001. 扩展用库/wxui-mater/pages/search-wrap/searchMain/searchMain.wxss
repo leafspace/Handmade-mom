@@ -1,0 +1,3 @@
+/* pages/searchMain/searchMain.wxss */
+page{background-color: #fff;}
+.search-main{padding: 20rpx 30rpx;}

@@ -1,0 +1,24 @@
+<!--pages/logistics/logistics.wxml-->
+<view>
+    <view class='logistics-head flex sizing p-30 f-bg'>
+        <span class='iconfont iconjilu1 f48 gray'></span>
+        <view class='right flex-box sizing'>
+            <view class='name f32 black'>物流公司：{{logistics.logisticsType}}</view>
+            <view class='num f25 gray'>运单号：{{logistics.logisticsNo}}</view>
+        </view>
+    </view>
+    <view class='logistics-info f-bg sizing p-30'>
+      <block wx:for="{{logistics.info}}" wx:key="{{index}}">
+        <view class='item flex'>
+            <view class='left flex sizing'>
+                <view class='time-data f30 black'>{{item.month_day}}</view>
+                <view class='time f24 gray'>{{item.minute_sec}}</view>
+            </view>
+            <view class="right flex-box relative sizing f26 gray {{index == 0?'col-m':''}}">
+                <view class="tag radius-50 absolute {{index == 0?'m-bg':''}}"></view>
+                <view class='text'>{{item.desc}}</view>
+            </view>
+        </view>
+      </block>
+    </view>
+</view>

@@ -1,0 +1,3 @@
+<!--pages/authorize_address/authorize_address.wxml-->
+<button bindtap="getAddress">获取用户地址位置</button>
+{{user_address}}

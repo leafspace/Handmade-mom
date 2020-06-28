@@ -1,0 +1,12 @@
+/* pages/paySuccess/paySuccess.wxss */
+page{background-color: #fff;box-sizing: border-box;padding: 30rpx;}
+.pay_success .info{padding: 80rpx 0 40rpx;color: #484D5D;}
+.pay_success .info .total{font-size: 80rpx;line-height: 70rpx;margin-top: 40rpx;justify-content: center;}
+.pay_success .info .total .rmb{font-size: 42rpx !important;display: block;line-height: 50rpx;margin-top: 23rpx;}
+.pay_success .discount .item{padding: 15rpx 0;}
+
+.pay_success .advertising{margin: 50rpx 0 30rpx;}
+.pay_success .advertising image{display: block;width: 100%;height: auto;margin: 0 auto;}
+.pay_success .advertising text{width: 92rpx;height: 48rpx;background-color: rgba(0, 0, 0, 0.2);justify-content: center;right: 6rpx;bottom: 6rpx;}
+.pay_success .back{display: block;background-color: transparent;color: #484D5D;width: 370rpx;height: 88rpx;line-height: 88rpx;border: 1rpx solid #484D5D;margin: 60rpx auto 0;}
+.pay_success .back::after{border:0;}

@@ -1,0 +1,9 @@
+/* pages/canvas/canvas.wxss */
+page{text-align: center;background-color: #1A63D4;}
+.poster{margin: 0 auto;}
+.container{width: 100vw;padding: 30rpx 0;}
+.container .row{display: flex;align-items: center;justify-content: space-between;width: 640rpx;margin: 60rpx 60rpx 0 60rpx;}
+.container .row .item{flex:1;overflow: hidden;text-align: center;font-size: 28rpx;color: #fff;line-height: 40rpx;}
+.container .row .item image{display: block;width: 70rpx;height: 70rpx;margin: 0 auto 18rpx;}
+.container .row .item{border-radius: 0;background-color: transparent;display: flex;flex-direction: column;line-height: 40rpx;}
+.container .row .item::after{border:0;}

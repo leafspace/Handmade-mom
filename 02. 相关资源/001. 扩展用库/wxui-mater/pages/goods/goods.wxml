@@ -1,0 +1,27 @@
+<!--pages/goods/goods.wxml-->
+<view class="goods-list">
+  <view class="title_wrap sizing flex f-bg p-24">
+    <text class="col-3 f-34 inline bold pl-12">明星产品</text>
+    <view class="right flex-box sizing gray f-28 t-r">更多<span class='iconfont iconxiangyoujiantou f-22 inline'></span></view>
+  </view>
+
+  <view class="goods flex flex-x-start sizing pl-12 pr-12">
+    <block wx:for='{{goods}}' wx:key="index">
+      <view class="item sizing radius-8 f-bg" data-id='{{item.id}}' bindtap='goodsDetail'>
+        <view class="img_box flex flex-x-center"><image src="{{item.pic}}" mode="widthFix"></image></view>
+        <view class="tit sizing f-28 col-3 twolist-hidden pl-12 pr-12">
+          <text class="m-bg radius-8 white f-22 mr-12 pl-12 pr-12">爆款</text>{{item.name}}
+        </view>
+        <text class="sub gray f-24 sizing block pl-12 pr-12">{{item.sub_title}}</text>
+        <view class="price-wrap flex sizing p-24">
+          <view class="price flex-box">
+            <view class="f-32 col-3"><text>￥</text>{{item.price}}</view>
+            <view class="f-24 gray line-price"><text>￥</text>{{item.line_price}}</view>
+          </view>
+          <view class="preorder f-22 t-c b-m col-m radius-50 sizing">预购</view>  
+        </view> 
+      </view> 
+    </block>
+  </view>
+  <view class="more-goods col-m f-28 b-m m-24 t-c">查看全部商品</view>
+</view>

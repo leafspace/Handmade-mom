@@ -1,0 +1,50 @@
+/* pages/popup/popup.wxss */
+.popup-wrap .item{width: 50%;}
+
+/* 表单弹窗 */
+.popup-info{top: 0;left: 0;right: 0;bottom: 0;z-index: 999;}
+.popup-info .content{width: 90%;top: 20vh;left: 50%;margin-left: -45%;padding: 10rpx 30rpx 30rpx;z-index: 1000;}
+.popup-info .content .iconcuowu{right: 20rpx;top: 35rpx;}
+.popup-info .content .tit{line-height: 90rpx;}
+.popup-info .content .rich-text{max-height: 50vh;overflow-y: scroll;}
+
+/* 富文本弹窗 */
+.popup-info .content .tit{margin-bottom: 30rpx;}
+.popup-info .content .row{background-color: #F2F3F5;padding: 0 20rpx;height: 80rpx;line-height: 80rpx;margin-bottom: 20rpx;color: #979797;}
+.popup-info .content .row text{margin-right: 20rpx;}
+.popup-info .content .row input{border:0;height: 80rpx;line-height: 80rpx;}  
+.popup-info .content .row .placeholder{height: 80rpx;line-height: 80rpx;}
+.popup-info .content .row button{background: linear-gradient(to right,#D60D08,#EE5A26);line-height: 60rpx;font-size: 26rpx;color: #fff;width: 186rpx;text-align: center;}
+.popup-info .content .row picker{flex: 1;object-fit: hidden;color: #202020;}
+.popup-info .content .btn{line-height: 85rpx;background: linear-gradient(to right,#D60D08,#EE5A26);margin: 80rpx auto 0;}
+
+.animated {
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: zoomIn;
+}
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 0.7);
+    transform: scale3d(0.7, 0.7, 0.7);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 0.7);
+    transform: scale3d(0.7, 0.7, 0.7);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

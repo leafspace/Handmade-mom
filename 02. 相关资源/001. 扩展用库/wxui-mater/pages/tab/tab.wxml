@@ -1,0 +1,50 @@
+<!--pages/tab/tab.wxml-->
+<!------------ 横向 ------------>
+<view class="tab_wrap">
+  <view class="head f-30 gray t-c flex f-bg">
+    <text class="flex-box {{current == 1 ? 'active col-3 bold relative':''}}" data-index="1" bindtap="currentHandle">分类一</text>
+    <text class="flex-box {{current == 2 ? 'active col-3 bold relative':''}}" data-index="2" bindtap="currentHandle">分类二</text>
+    <text class="flex-box {{current == 3 ? 'active col-3 bold relative':''}}" data-index="3" bindtap="currentHandle">分类三</text>
+  </view>
+  <view class="content sizing p-30">
+    <view wx:if="{{current == 1}}">分类一内容</view>
+    <view wx:if="{{current == 2}}">分类二内容</view>
+    <view wx:if="{{current == 3}}">分类三内容</view>
+  </view>
+</view> 
+
+<!------------ 竖向 ------------>
+<view class="store_info">
+  <scroll-view class="store_scroll_left" scroll-y="true" style="height: 100%;" bindscroll="scroll">
+    <block wx:for="{{market}}" wx:for-item='store' wx:key="index">
+      <view class="store_item {{current_cate == index ? 'active':''}}" data-index="{{index}}" bindtap="currentCateHandle">{{store.name}}</view>
+    </block>
+  </scroll-view>
+  <scroll-view class="store_scroll_right" scroll-y="true" style="height: 100%;" bindscroll="scroll" scroll-top="{{scrollTop}}">
+    <block wx:for="{{market}}" wx:for-item='store' wx:for-index='index_item' wx:key="index">
+      <view wx:if="{{current_cate == index_item}}" index="{{index_item}}">
+
+        <block wx:for="{{store.cate}}" wx:for-item='store_item' wx:key="idx">
+          <view class="store_item_box" bindtap="storeDetail" data-id="{{store_item.id}}">
+            <image src="{{store_item.pic}}"></image>
+            <view class="store_item_right">
+              <view class="name_row">
+                <text class="tips" wx:if="{{store_item.is_good_store == '1'}}">{{store_item.is_good_store == 1 ? '优选':''}}</text>
+                <text class="name">{{store_item.store_name}}</text>
+              </view>
+              <view class="tag_row">
+                <text class="tag_item">{{store_item.tag}}</text>
+              </view>
+              <view class="address">{{store_item.store_address}}</view>
+            </view>
+            <view class="num">
+              <text>{{store_item.view}}</text>
+              <text>口碑值</text>
+            </view>
+          </view>
+        </block>
+        
+      </view>
+    </block>
+  </scroll-view>
+</view>

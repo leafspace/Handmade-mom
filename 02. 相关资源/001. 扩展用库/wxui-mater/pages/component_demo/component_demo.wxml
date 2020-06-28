@@ -1,0 +1,11 @@
+<!--pages/component_demo/component_demo.wxml-->
+<!-- bind:swiperHandle="swiper" ----- 当自定义组件触发“swiperHandle”事件时，调用“swiper”方法 -->
+<diy-banner banner="{{banner}}" customValue="{{customValue}}" current="{{current}}" bind:swiperHandle="swiper" id="banner">
+  <!-- 一个 -->
+  <!-- <view class="solt">这里是插入到组件slot中的内容</view>   solt样式写在父组件里才生效 -->
+  
+  <!-- 多个 -->
+  <view slot="before" class="solt">这里是插入到组件slot name="before"中的内容</view> <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+  <view slot="after" class="solt">这里是插入到组件slot name="after"中的内容</view> <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+</diy-banner>
+<button type="primary" bindtap="getChildFunction">获取子组件方法</button>

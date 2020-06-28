@@ -1,0 +1,151 @@
+<!--pages/order/order.wxml-->
+<view class="tab_wrap">
+  <view class="head">
+    <text class="{{current == 1 ? 'active':''}}" data-index="1" bindtap="currentHandle">全部</text>
+    <text class="{{current == 2 ? 'active':''}}" data-index="2" bindtap="currentHandle">待支付</text>
+    <text class="{{current == 3 ? 'active':''}}" data-index="3" bindtap="currentHandle">待发货</text>
+    <text class="{{current == 4 ? 'active':''}}" data-index="4" bindtap="currentHandle">待收货</text>
+  </view>
+  <view class="content">
+    <view wx:if="{{current == 1}}" class="item-wrap sizing">
+      <!-- 待支付 -->
+      <view class="item f-bg radius-10" bindtap="orderDetail">
+        <view class="top flex f28 b-b sizing">
+          <text class="gray">20191028152904233107</text>
+          <text class="col-m">待支付</text>
+        </view>
+        <view class="goods_wrap b-b sizing">
+          <view class="item flex sizing">
+            <image class="img" src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-27/5d64892e1dad0.jpg"></image>
+            <view class="right flex-box">
+              <view class="name f28 black">迷你榨汁机</view>
+              <view class="attr f24 gray">默认规格名+大红</view>
+              <view class="price_num flex">
+                <view class="price f30 col-m"><text class="rmb f20">￥</text>99.00</view>
+                <view class="num f28 black">x2</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="total b-b sizing">
+          <view class="row flex">
+            <view class="left bold f28 sub-gray">商城</view>
+            <view class="right f24 sub-gray">共4件商品 合计 <view class="sum f40 col-m"><text class="rmb">￥</text>0.00</view></view>
+          </view>
+          <view class="time f24 gray t-r">2019-10-28 15:29:04</view>
+        </view>
+        <view class="operation flex" wx:if="{{time[0]['countDown']['countDownSeconds'] > 0}}">
+          <view class="flex-box f26 sub-gray sizing time">支付剩余时间：{{time[0]['countDown']['show']}}</view>
+          <view class="item f26 white m-bg m-b-b radius-50 sizing t-c">付款</view>
+          <view class="item f26 sub-gray radius-50 sizing t-c" bindtap="cancelHandle">取消订单</view>
+        </view>
+      </view>
+      <view class="item f-bg radius-10" bindtap="orderDetail">
+        <view class="top flex f28 b-b sizing">
+          <text class="gray">20191028152904233107</text>
+          <text class="col-m">待支付</text>
+        </view>
+        <view class="goods_wrap b-b sizing">
+          <view class="item flex sizing">
+            <image class="img" src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-27/5d64892e1dad0.jpg"></image>
+            <view class="right flex-box">
+              <view class="name f28 black">迷你榨汁机</view>
+              <view class="attr f24 gray">默认规格名+大红</view>
+              <view class="price_num flex">
+                <view class="price f30 col-m"><text class="rmb f20">￥</text>99.00</view>
+                <view class="num f28 black">x2</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="total b-b sizing">
+          <view class="row flex">
+            <view class="left bold f28 sub-gray">商城</view>
+            <view class="right f24 sub-gray">共4件商品 合计 <view class="sum f40 col-m"><text class="rmb">￥</text>0.00</view></view>
+          </view>
+          <view class="time f24 gray t-r">2019-10-28 15:29:04</view>
+        </view>
+        <view class="operation flex" wx:if="{{time[1]['countDown']['countDownSeconds'] > 0}}">
+          <view class="flex-box f26 sub-gray sizing time">支付剩余时间：{{time[1]['countDown']['show']}}</view>
+          <view class="item f26 white m-bg m-b-b radius-50 sizing t-c">付款</view>
+          <view class="item f26 sub-gray radius-50 sizing t-c" bindtap="cancelHandle">取消订单</view>
+        </view>
+      </view>
+      <!-- 已收货 -->
+      <view class="item f-bg radius-10" bindtap="orderDetail">
+        <view class="top flex f28 b-b sizing">
+          <text class="gray">20191028152904233107</text>
+          <text class="col-m">已收货</text>
+        </view>
+        <view class="goods_wrap b-b sizing">
+          <view class="item flex sizing">
+            <image class="img" src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-27/5d64892e1dad0.jpg"></image>
+            <view class="right flex-box">
+              <view class="name f28 black">迷你榨汁机</view>
+              <view class="attr f24 gray">默认规格名+大红</view>
+              <view class="price_num flex">
+                <view class="price f30 col-m"><text class="rmb f20">￥</text>99.00</view>
+                <view class="num f28 black">x2</view>
+              </view>
+            </view>
+          </view>
+          <view class="item flex sizing">
+            <image class="img" src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-27/5d64892e1dad0.jpg"></image>
+            <view class="right flex-box">
+              <view class="name f28 black">迷你榨汁机</view>
+              <view class="attr f24 gray">默认规格名+大红</view>
+              <view class="price_num flex">
+                <view class="price f30 col-m"><text class="rmb f20">￥</text>99.00</view>
+                <view class="num f28 black">x2</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="total b-b sizing">
+          <view class="row flex">
+            <view class="left bold f28 sub-gray">商城</view>
+            <view class="right f24 sub-gray">共4件商品 合计 <view class="sum f40 col-m"><text class="rmb">￥</text>0.00</view></view>
+          </view>
+          <view class="time f24 gray t-r">2019-10-28 15:29:04</view>
+        </view>
+        <view class="operation flex">
+          <view class="item f26 sub-gray radius-50 sizing t-c" bindtap='logisticsHandle'>查看物流</view>
+        </view>
+      </view>
+      <!-- 已完成 -->
+      <view class="item f-bg radius-10" bindtap="orderDetail">
+        <view class="top flex f28 b-b sizing">
+          <text class="gray">20191028152904233107</text>
+          <text class="col-m">已完成</text>
+        </view>
+        <view class="goods_wrap b-b sizing">
+          <view class="item flex sizing">
+            <image class="img" src="http://mlc-xiaodian.oss-cn-shanghai.aliyuncs.com/dev/xd/upload/1/6/2019-08-27/5d64892e1dad0.jpg"></image>
+            <view class="right flex-box">
+              <view class="name f28 black">迷你榨汁机</view>
+              <view class="attr f24 gray">默认规格名+大红</view>
+              <view class="price_num flex">
+                <view class="price f30 col-m"><text class="rmb f20">￥</text>99.00</view>
+                <view class="num f28 black">x2</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="total b-b sizing">
+          <view class="row flex">
+            <view class="left bold f28 sub-gray">商城</view>
+            <view class="right f24 sub-gray">共4件商品 合计 <view class="sum f40 col-m"><text class="rmb">￥</text>0.00</view></view>
+          </view>
+          <view class="time f24 gray t-r">2019-10-28 15:29:04</view>
+        </view>
+        <view class="operation flex">
+          <view class="item f26 sub-gray radius-50 sizing t-c" bindtap='commentHandle'>去评价</view>
+        </view>
+      </view>
+      
+    </view>
+    <view wx:if="{{current == 2}}">人人人人</view>
+    <view wx:if="{{current == 3}}">她她她她她她</view>
+    <view wx:if="{{current == 4}}">灌灌灌灌</view>
+  </view>
+</view> 

@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mall/mall",
+    "pages/mine/mine",
+    "pages/search-wrap/search/search",
+    "pages/search-wrap/searchMain/searchMain",
+    "pages/search-wrap/searchResult/searchResult",
+    "pages/swiper/swiper",
+    "pages/menu/menu",
+    "pages/notice/notice",
+    "pages/title/title",
+    "pages/scroll/scroll",
+    "pages/popup/popup",
+    "pages/loading/loading",
+    "pages/tab/tab",
+    "pages/goods/goods",
+    "pages/goodsDetail/goodsDetail",
+    "pages/confirmOrder/confirmOrder",
+    "pages/address/address",
+    "pages/addAddress/addAddress",
+    "pages/editAddress/editAddress",
+    "pages/paySuccess/paySuccess",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail",
+    "pages/logistics/logistics",
+    "pages/comment/comment",
+    "pages/commentList/commentList",
+    "pages/canvas/canvas",
+    "pages/canvas2/canvas2",
+    "pages/location/location",
+    "pages/animate/animate",
+    "pages/moment_info/moment_info",
+    "pages/count_down/count_down",
+    "pages/phone/phone",
+    "pages/authorize_address/authorize_address",
+    "pages/message/message",
+    "pages/rich_text/rich_text",
+    "pages/share/share", 
+    "pages/audio/audio",
+    "pages/component_demo/component_demo",
+    "pages/logs/logs"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/index/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#E9C7A2",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/expo1.png",
+        "selectedIconPath": "img/expo1.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "img/expo1.png",
+        "selectedIconPath": "img/expo1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/mine1.png",
+        "selectedIconPath": "img/mine1.png"
+      }
+    ],
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  } 
+}

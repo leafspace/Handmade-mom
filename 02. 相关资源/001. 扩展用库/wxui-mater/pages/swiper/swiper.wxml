@@ -1,0 +1,43 @@
+<!--pages/swiper/swiper.wxml-->
+<swiper class="swiper m-24 radius-10" autoplay="true" indicator-dots='true' indicator-color='rgba(255,255,255,.6)' indicator-active-color='#fff' circular='true'>
+  <block wx:for="{{banner}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item.url}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<swiper class="swiper m-24 radius-10 custom-dot" autoplay="true" indicator-dots='true' indicator-color='rgba(255,255,255,.6)' indicator-active-color='#fff' circular='true'>
+  <block wx:for="{{banner}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item.url}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<swiper class="swiper m-24 radius-10 custom-dot2" autoplay="true" indicator-dots='true' indicator-color='rgba(255,255,255,.6)' indicator-active-color='#fff' circular='true'>
+  <block wx:for="{{banner}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item.url}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="swiper-custom-wrap m-24">
+  <swiper class="swiper radius-10 custom-dot3" autoplay="true" circular='true' bindchange='swiperChange'>
+    <block wx:for="{{banner}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.url}}" mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="current-dot white f-24 radius-50">{{current}}/{{banner.length}}</view>
+</view>
+
+<swiper class="swiper-margin" autoplay="true" indicator-dots='true' indicator-color='rgba(255,255,255,.6)' indicator-active-color='#fff' circular='true' previous-margin='30px' next-margin='30px' bindchange='swiperChange2'>
+  <block wx:for="{{banner}}" wx:key="*this">
+    <swiper-item class="item {{current2 == index ? 'active':'aaa'}}">
+      <image src="{{item.url}}"></image>
+    </swiper-item>
+  </block>
+</swiper>

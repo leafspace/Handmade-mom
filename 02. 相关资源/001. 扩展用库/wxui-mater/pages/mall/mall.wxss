@@ -1,0 +1,13 @@
+/* pages/mall/mall.wxss */
+.search > image{display: block;width: 130rpx;height: auto;margin: 0 20rpx 0 0;}
+
+.nav{justify-content: flex-start;white-space: nowrap;height: 90rpx;padding: 0 30rpx;width: 100vw;}
+.nav .item{display: inline-block;margin-right: 40rpx;line-height: 90rpx;} 
+.nav .item:last-child{margin: 0;}
+.nav .active{color: #2D2D2D !important;}
+
+.swiper{width: 100vw;height: 250rpx;}
+.swiper image{display: block;width: 100%;height: auto;}
+
+.menu{padding: 30rpx 0;background-color: #fff;}
+.menu image{display: block;width: 90rpx;height: 90rpx;margin: 0 auto 15rpx;}

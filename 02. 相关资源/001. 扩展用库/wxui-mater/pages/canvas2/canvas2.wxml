@@ -1,0 +1,14 @@
+<!--pages/canvas/canvas.wxml-->
+<view class="container">
+  <canvas class='poster' canvas-id='main' style='width:320px;height:440px;'></canvas>
+  <view class="row" wx:if="{{!loading}}">
+    <button class="item" hover-class="none" open-type="share">
+      <image src="http://www.pinnoocle.net/static/index/img/xcxcode.jpg"></image>
+      <text>分享好友</text>
+    </button>
+    <button class="item" bindtap='saveHandle'>
+      <image src="http://www.pinnoocle.net/static/index/img/xcxcode.jpg"></image>
+      <text>保存图片</text>
+    </button>
+  </view>
+</view>

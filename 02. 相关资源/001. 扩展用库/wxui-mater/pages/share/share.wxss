@@ -1,0 +1,6 @@
+/* pages/share/share.wxss */
+.share_info {left: 0;right: 0;bottom: 0;z-index:1000;}
+.share_info .item{padding: 30rpx 0;}
+.share_info .item image{width: 110rpx;height: 110rpx;margin: 0 auto 15rpx;}
+.share_info .cancel{line-height: 100rpx;border-top: 10rpx solid #E5E5E5;}
+

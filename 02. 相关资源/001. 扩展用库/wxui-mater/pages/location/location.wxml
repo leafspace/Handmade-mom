@@ -1,0 +1,2 @@
+<!--pages/location/location.wxml-->
+<view class="f32 sizing p-30 blank" bindtap="locationHandle" >{{address}}</view>

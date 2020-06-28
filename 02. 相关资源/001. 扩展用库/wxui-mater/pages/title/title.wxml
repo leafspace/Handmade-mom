@@ -1,0 +1,5 @@
+<!--pages/title/title.wxml-->
+<view class="title sizing p-30">
+  <text>标题内容</text>
+  <view class="more">更多<span class='iconfont icon-xiangyoujiantou'></span></view>
+</view>

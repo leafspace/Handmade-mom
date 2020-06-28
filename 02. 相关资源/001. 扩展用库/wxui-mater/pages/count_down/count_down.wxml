@@ -1,0 +1,3 @@
+<!--pages/count_down/count_down.wxml-->
+<view>{{time}}</view>
+<view>{{time2}}</view>

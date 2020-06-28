@@ -1,0 +1,19 @@
+<!--components/banner/banner.wxml-->
+<view>
+  <slot name="before"></slot>
+  
+  <view class="swiper-custom-wrap m-24">
+    <swiper class="swiper radius-10 custom-dot3" autoplay="true" circular='true' bindchange='_swiperChange'>
+      <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item.img}}" mode="widthFix" data-path="{{item.url}}" bindtap="_toPath"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="current-dot white f-24 radius-50">{{current}}/{{banner.length}}</view>
+  </view>
+  <view class="customVlue">父组件传递过来的值：<text>\n{{customValue}}</text></view>
+  <view class="internalValue">{{internalValue}}</view>
+  
+  <slot name="after"></slot>
+</view>

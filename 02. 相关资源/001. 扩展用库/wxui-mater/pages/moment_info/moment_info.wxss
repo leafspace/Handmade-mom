@@ -1,0 +1,3 @@
+/* pages/moment_info/moment_info.wxss */
+page{background-color: #fff;box-sizing: border-box;padding: 0 30rpx;font-size: 30rpx;color: #333;}
+.row i{background-color: #FFFF00;}

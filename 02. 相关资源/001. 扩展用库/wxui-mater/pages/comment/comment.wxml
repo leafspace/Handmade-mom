@@ -1,0 +1,33 @@
+<!--pages/comment/comment.wxml-->
+<view class="comment_wrap flex f30 col-3 sizing p-30 b-b">
+  <text>总体评价</text>
+  <view class="star_wrap flex">
+    <span class="iconfont {{score >= 1 ? 'f40 col-m iconstar':' f38 gray iconwujiaoxing2'}}" data-num='1' bindtap='starHandle'></span>
+    <span class="iconfont {{score >= 2 ? 'f40 col-m iconstar':' f38 gray iconwujiaoxing2'}}" data-num='2' bindtap='starHandle'></span>
+    <span class="iconfont {{score >= 3 ? 'f40 col-m iconstar':' f38 gray iconwujiaoxing2'}}" data-num='3' bindtap='starHandle'></span>
+    <span class="iconfont {{score >= 4 ? 'f40 col-m iconstar':' f38 gray iconwujiaoxing2'}}" data-num='4' bindtap='starHandle'></span>
+    <span class="iconfont {{score >= 5 ? 'f40 col-m iconstar':' f38 gray iconwujiaoxing2'}}" data-num='5' bindtap='starHandle'></span>
+  </view>
+</view>
+
+<view class="tag flex sizing">
+  <block wx:for="{{tagArr}}">
+    <view class="item sizing col-3 f26 t-c" id="{{index}}" bindtap="tagHandle"><text class="g-bg r5 {{item.status ? 'm-bg white':''}}">{{item.val}}</text></view>
+  </block>
+</view>
+
+<textarea class="textarea g-bg radius-10 sizing p-30 f28 gray" bindinput="textAreaHandle" placeholder="说说哪里好，鼓励下我吧~" placeholder-class="placeholder" />
+
+<view class="camera_wrap flex sizing">
+  <block wx:for="{{files}}" wx:key="*this">
+    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+    </view>
+  </block>
+  <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+  </view>
+</view>
+<view class="tips f26 gray sizing">图片最多上传6张</view>
+
+<view class="btn m-bg white radius-10 f32 t-c" bindtap="commentHandle">发表评论</view>

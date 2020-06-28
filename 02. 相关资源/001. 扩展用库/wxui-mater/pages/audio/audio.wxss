@@ -1,0 +1,16 @@
+/* pages/audio/audio.wxss */
+.intro_box{margin: 50rpx 30rpx;box-shadow: 0 0 10rpx 6rpx rgba(138,138,137,.1);box-sizing: border-box;padding: 0 30rpx 100rpx;}
+.intro_box .tit{color: #1A1A1A;font-size: 30rpx;border-bottom:1px solid #EEE;height: 100rpx;display: flex;align-items: center;}
+.intro_box .tit text{display: inline-block;border-left: 8rpx solid #E5C6A5;padding-left: 20rpx;line-height: 30rpx;}
+.audio_wrap{margin: 40rpx 0 28rpx;}
+.audio_wrap > image{display: block;width: 80rpx;height: 80rpx;border-radius: 8rpx;margin-right: 20rpx;}
+.audio_wrap .audio > image{display: block;width: 430rpx;height: auto;margin: 0;}
+.audio_wrap .audio_info{position: absolute;top: 0;left: 0;right: 46rpx;bottom: 0;}
+.audio_wrap .audio_info{box-sizing: border-box;padding: 0 25rpx;display: flex;align-items: center;justify-content: space-between;}
+.audio_wrap .audio_info view > image{display: block;width: 45rpx;height: 45rpx;}
+.audio_wrap .audio_info .audio_length{display: flex;align-items: center;justify-content: center;flex-direction: column;color: #C2C2C2;font-size: 26rpx;}
+.audio_wrap .audio_info .audio_length text{display: block;width: 10rpx;height: 10rpx;border-radius: 50rpx;background-color: #F00806;margin: 8rpx auto;}
+.praise {color:#ccc;font-size:20rpx;text-align: center;}
+.praise .img_wrap{width: 40rpx;height:40rpx;display: flex;align-items: center;justify-content: center;margin: 0 auto 5rpx;}
+.praise .img_wrap image{display: block;width: 36rpx;height: auto;margin: 0;}
+.intro_text{color: #424242;line-height: 42rpx;text-align: justify;}

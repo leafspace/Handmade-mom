@@ -1,0 +1,6 @@
+/* pages/commentList/commentList.wxss */
+.commentList{padding: 0 30rpx;}
+.all{line-height: 90rpx;}
+.select{justify-content: flex-start;flex-flow: row wrap;padding: 25rpx 0;}
+.select .item{width: 25%;padding: 0 13rpx;margin: 13rpx 0;}  
+.select .item text{display: block;line-height: 58rpx;}

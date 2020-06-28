@@ -1,0 +1,30 @@
+<!--pages/audio/audio.wxml-->
+<view class="intro_box r10">
+  <view class="tit"><text>个性简介</text></view>
+  <view class="audio_wrap flex">
+    <image src="/img/logo.jpg"></image>
+    <view class="audio flex-box relative">
+      <image src="/img/audio_bg.png" mode="widthFix"></image>
+      <view class="audio_info absolute flex" catchtap="audioHandle"> 
+        <view class="flex1" wx:if="{{audioPlay}}">
+          <image src='/img/audioPlay.gif'></image>
+        </view>
+        <view class="flex1" wx:else>
+          <image src='/img/audioPlay.png' hidden="{{audioPlay}}"></image>
+        </view>
+        <view class="audio_length" wx:if="{{duration > 0}}"><text></text><span>{{duration}}</span></view>
+      </view> 
+    </view>
+    <view class="praise" wx:if="{{praise}}" bindtap="praiseHandle">
+      <view class="img_wrap"><image src="/img/praise4.png" mode="widthFix"></image></view>
+      已点赞
+    </view>
+    <view class="praise" wx:else bindtap="praiseHandle">
+      <view class="img_wrap"><image src="/img/praise3.png" mode="widthFix"></image></view>
+      点赞
+    </view>
+  </view>
+  <view class="intro_text f24">
+    <rich-text nodes="{{seller.intro}}"></rich-text>
+  </view>
+</view>

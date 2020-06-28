@@ -1,0 +1,7 @@
+/* pages/scroll/scroll.wxss */
+.scroll_wrap{white-space: nowrap;padding: 20rpx 0 10rpx;background-color: #fff;}
+.scroll_wrap .item{display: inline-block;width: calc((100vw - 60rpx) / 2);margin: 0 0 0 20rpx;}
+.scroll_wrap .item:last-child{margin-right: 20rpx;}
+.scroll_wrap .item image{display: block;width: 100%;height: auto;border-radius: 10rpx;} 
+.scroll_wrap .item .name{font-size: 28rpx;color: #505050;display: block;margin: 13rpx 0 5rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.scroll_wrap .item .info{color: #B6B6B6;font-size: 24rpx;display: block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}

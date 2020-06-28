@@ -1,0 +1,142 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"nodeModules": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx580f94487684899e",
+	"projectname": "wxui-mater",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "倒计时",
+					"pathName": "pages/count_down/count_down",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "菜单",
+					"pathName": "pages/menu/menu",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商城",
+					"pathName": "pages/mall/mall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/message/message",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "富文本",
+					"pathName": "pages/rich_text/rich_text",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "轮播图",
+					"pathName": "pages/swiper/swiper",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "弹窗",
+					"pathName": "pages/popup/popup",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "商品列表",
+					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/share/share",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "音频",
+					"pathName": "pages/audio/audio",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "公告",
+					"pathName": "pages/notice/notice",
+					"scene": null
+				}
+			]
+		}
+	}
+}

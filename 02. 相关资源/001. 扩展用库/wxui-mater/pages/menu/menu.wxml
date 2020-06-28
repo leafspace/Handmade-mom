@@ -1,0 +1,71 @@
+<!--pages/menu/menu.wxml-->
+<!-- 类型一 -->
+<view class="menu flex t-c col-3 f-30 f-bg">
+	<view class="item flex-four" data-path="pages/mall/mall" bindtap="toPath">
+		<image class="radius-50 block" src="http://www.pinnoocle.net/static/index/img/banner1-min.jpg"></image>
+		<text class="">商城</text>
+	</view>
+	<view class="item flex-four" data-path="pages/search/search" bindtap="toPath">
+		<image class="radius-50 block" src="http://www.pinnoocle.net/static/index/img/banner2-min.jpg"></image>
+		<text class="">搜索</text>
+	</view>
+	<view class="item flex-four" data-path="pages/popup/popup" bindtap="toPath">
+		<image class="radius-50 block" src="http://www.pinnoocle.net/static/index/img/banner3-min.jpg"></image>
+		<text class="">弹窗</text>
+	</view>
+	<view class="item flex-four" data-path="pages/banner/banner" bindtap="toPath">
+		<image class="radius-50 block" src="http://www.pinnoocle.net/static/index/img/banner1-min.jpg"></image>
+		<text class="">轮播</text>
+	</view>
+</view>
+
+<!-- 类型二 -->
+<view class="title_wrap sizing flex f-bg p-24">
+	<text class="col-3 f-34 inline bold pl-12">标题名称</text>
+	<view class="right flex-box sizing gray f-28 t-r">更多<span class='iconfont iconxiangyoujiantou f-22'></span></view>
+</view>
+
+<!-- 类型三 -->
+<view class="operation fixed white f-24">
+	<view class="item flex flex-x-center radius-50 m-24" data-path="pages/mine/mine" bindtap="toPath">我的</view>
+	<view class="item flex flex-x-center radius-50 m-24" bindtap="shareHandle">分享</view>
+	<button class="item flex flex-x-center radius-50 m-24 f-24 white" open-type="contact">客服</button>
+</view>
+
+<!-- 类型四 -->
+<view class="mask" wx:if='{{navStatus}}'></view>
+<view class="nav_wrap fixed flex" bindtap="navHandle" style="transform: {{navStatus ? 'translateX(0)':'translateX(308rpx)'}}">
+	<image class="nav" src="/img/nav.png" mode="widthFix"></image>
+	<view class="content flex f-bg padding-box f-22 gray">
+		<view class="item flex flex-x-center flex-dir-column" data-path="pages/index/index" bindtap="toPath">
+			<image src="/img/expo1.png" mode="widthFix"></image><text>首页</text>
+		</view>
+		<view class="item flex flex-x-center flex-dir-column" data-path="pages/mine/mine" bindtap="toPath">
+			<image src="/img/mine1.png" mode="widthFix"></image><text>我的</text>
+		</view>
+	</view>
+</view>
+
+<!-- 类型五 -->
+<view class="bot_fixed fixed flex f-bg f-22 gray">
+	<view class="item flex-box flex flex-x-center flex-dir-column" data-path="pages/mall/mall" bindtap="toPath">
+		<image src="/img/expo1.png" mode="widthFix"></image>
+		<text>商城</text>
+	</view>
+	<view class="item flex-box flex flex-x-center flex-dir-column" data-path="pages/search/search" bindtap="toPath">
+		<image src="/img/expo1.png" mode="widthFix"></image>
+    <text>搜索</text>
+	</view>
+	<view class="item flex-box flex flex-x-center flex-dir-column" data-path="pages/popup/popup" bindtap="toPath">
+		<image src="/img/expo1.png" mode="widthFix"></image>
+    <text>弹窗</text>
+	</view>
+	<view class="item flex-box flex flex-x-center flex-dir-column" data-path="pages/banner/banner" bindtap="toPath">
+		<image src="/img/expo1.png" mode="widthFix"></image>
+    <text>轮播</text>
+	</view>
+	<view class="item flex-box flex flex-x-center flex-dir-column" data-path="pages/mine/mine" bindtap="toPath">
+		<image src="/img/mine1.png" mode="widthFix"></image>
+    <text>我的</text>
+	</view>
+</view>

@@ -1,0 +1,17 @@
+/**index.wxss**/
+.userinfo {display: flex;align-items: center;box-sizing: border-box;padding: 50rpx 0;color: #888;}
+.userinfo-avatar {width: 100rpx;height: 100rpx;margin: 0 30rpx;border-radius: 50%;}
+.userinfo button {box-sizing: border-box;height: 80rpx;line-height: 80rpx;font-size: 31rpx;}
+
+.container{background-color: #fff;margin: 0 30rpx;border-radius: 10rpx;}
+.container navigator{box-sizing: border-box;padding: 0 30rpx;}
+.container navigator:last-child .item{border:0;} 
+.container .item{display: flex;align-items: center;justify-content: space-between;font-size: 32rpx;color: #333;height: 95rpx;border-bottom: 1px solid #eee;}
+.container .item span{font-size: 28rpx;color: #888;}
+
+
+.box_wrap_box{background-color: #ddd;padding: 30rpx 0;height: 50vh;overflow: visivle;}
+.box_wrap_box .box_wrap{width: 50%;margin: 0 auto;animation:mymove 10s infinite;animation-delay:2s;}
+.box_wrap_box .box_wrap .item{margin: 20rpx auto;}
+.box_wrap_box .box_wrap image{display: block;width: 100%;height: auto;margin: 0 auto;border: 2rpx solid #f00;box-sizing: border-box;}
+

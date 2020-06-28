@@ -1,0 +1,5 @@
+/* pages/title/title.wxss */
+.title{display: flex;align-items: center;justify-content: space-between;}
+.title text{font-size: 34rpx;color: #373737;border-left: 8rpx solid #E9C7A2;padding-left: 20rpx;display: inline-block;height: 30rpx;line-height: 30rpx;font-weight: bold;}
+.more{flex: 1;overflow: hidden;color: #B6B6B6;font-size: 28rpx;text-align: right;}
+.more span{font-size: 22rpx;margin-left: 8rpx;vertical-align: middle;}

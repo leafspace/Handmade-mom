@@ -1,0 +1,13 @@
+/* pages/logistics/logistics.wxss */
+.logistics-head{justify-content: flex-start;margin-bottom: 20rpx;}
+.logistics-head .right{padding-left: 30rpx;}
+.logistics-head .right .name{margin-bottom: 20rpx;}
+
+.logistics-info .item{align-items: flex-start;}
+.logistics-info .item:nth-child(1) .right .tag{width: 24rpx !important;height: 24rpx !important;left: -13rpx !important;top: 8rpx !important;}
+.logistics-info .item .left{flex-direction: column;justify-content: center;padding-right: 30rpx;}
+.logistics-info .item .left .time-data{margin-bottom: 5rpx;}
+.logistics-info .item .right{overflow: visible;border-left: 1rpx dotted #eee;padding-left: 30rpx;line-height: 40rpx;padding-bottom: 50rpx;min-height: 100rpx;}
+.logistics-info .item .right .m-bg{background-color: #DCAB7E !important;}
+.logistics-info .item .right .tag{width: 10rpx;height: 10rpx;background-color: #CCC;left: -5rpx;top: 15rpx;}
+ 

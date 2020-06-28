@@ -1,0 +1,25 @@
+/* pages/menu/menu.wxss */
+/* 类型一 */
+.menu{padding: 30rpx 0;}
+.menu image{width: 90rpx;height: 90rpx;margin: 0 auto 15rpx;}
+
+/* 类型二 */
+.title_wrap{margin: 12rpx 0;}
+.title_wrap text{border-left: 8rpx solid #E9C7A2;height: 30rpx;line-height: 30rpx;margin-left: -24rpx;}
+.title_wrap .right span{display: inline-block;vertical-align: middle;margin: -4rpx 0 0 6rpx;}
+
+/* 类型三 */
+.operation{top: 48vh;right: 0;z-index: 999;}
+.operation .item{width: 80rpx;height: 80rpx;background-color: rgba(0,0,0,.55);padding: 0;}
+.operation .item::after{border:0;}
+
+/* 类型四 */
+.nav_wrap{right: 0;bottom: 220rpx;z-index: 1000;transition: all .2s;}
+.nav_wrap .nav{width: 100rpx;height: auto;margin: 0 auto;}
+.nav_wrap .content{border-top-left-radius: 8rpx;border-bottom-left-radius: 8rpx;}
+.nav_wrap .content .item{width: 130rpx;height: 150rpx;}
+.nav_wrap .content .item image{width: 65rpx;height: auto;margin: -12rpx auto 2rpx;}
+
+/* 类型五 */
+.bot_fixed{left: 0;right: 0;bottom: 0;z-index: 999;height: 100rpx;border-top: 1px solid #D5D5D5;}
+.bot_fixed .item image{display: block;width: 55rpx;height: auto;margin: 0 auto;}

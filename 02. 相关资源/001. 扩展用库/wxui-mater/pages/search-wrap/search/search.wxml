@@ -1,0 +1,5 @@
+<!--pages/search/search.wxml-->
+<view class="search-wrap flex m-24 f-bg radius-50 sizing" bindtap='searchHandle'>
+  <span class='iconfont iconsousuo1 gray f-30'></span>
+  <input class="flex-box f-28" disabled="true" placeholder="搜索你喜欢的商品" placeholder-class="placeholder"></input>
+</view>

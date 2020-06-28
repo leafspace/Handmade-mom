@@ -1,0 +1,19 @@
+<!--pages/notice/notice.wxml-->
+<!-- 横向滚动 -->
+<view class="notice-wrap flex sizing p-30">
+  <image src="/img/voice.png" mode="widthFix"></image>
+  <view class="flex-box relative white f-28">
+    <text class="notice absolute" style="left:{{marginLeft}}rpx">{{noticeText}}</text>
+  </view>
+</view>
+
+<!-- 竖向滚动 -->
+<view class="notice-vertical flex sizing p-30">
+  <image src="/img/notice.png" mode="widthFix"></image>
+  <swiper class="flex-box black f-28 mr-12" autoplay="true" vertical="true" circular="true" interval="3000">
+    <block wx:for="{{notice}}" wx:key="*this">
+      <swiper-item class="onelist-hidden">{{item}}</swiper-item>
+    </block>
+  </swiper>
+  <span class="iconfont iconxiangyoujiantou f-24 black"></span>
+</view>

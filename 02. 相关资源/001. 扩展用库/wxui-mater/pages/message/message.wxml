@@ -1,0 +1,2 @@
+<!--pages/message/message.wxml-->
+<button bindtap="getMessage">点击订阅</button>

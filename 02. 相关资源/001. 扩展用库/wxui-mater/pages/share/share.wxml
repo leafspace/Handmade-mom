@@ -1,0 +1,20 @@
+<!--pages/share/share.wxml-->
+<button type="primary" bindtap="shareHandle" style="margin:40rpx">分享</button>
+
+<!-- 分享弹窗 -->
+<view class="share_pop" wx:if='{{shareStatus}}'>
+  <view class="mask" bindtap="shareHandle"></view>
+  <view class="share_info absolute f-bg t-c">
+    <view class="flex">
+      <button class="item flex-box f-26 col-8 btn-normal" open-type='share' hover-class="none" catchtap="shareHandle">
+        <image class="block radius-50" src="/img/share1.png"></image>
+        <text>微信好友</text>
+      </button>
+      <view class="item flex-box f-26 col-8" bindtap="posterHandle">
+        <image class="block radius-50" src="/img/share2.png"></image>
+        <text>生成海报</text>
+      </view>
+    </view>
+    <view class="cancel f-32 col-8" bindtap="shareHandle">取消</view>
+  </view>
+</view>

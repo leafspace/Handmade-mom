@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "diy-banner":"/components/banner/banner"
+  },
+  "navigationBarTitleText": "自定义banner"
+}

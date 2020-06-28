@@ -1,0 +1,34 @@
+<!--pages/edit_address/edit_address.wxml-->
+<view class="add_address f-bg f31 black">
+  <view class="row flex b-b sizing">
+    <view class="left">收货人</view>
+    <view class="right flex-box"><input  placeholder="请输入收货人姓名" placeholder-class="placeholder" /></view>
+  </view>
+  <view class="row flex b-b sizing">
+    <view class="left">手机号码</view>
+    <view class="right flex-box"><input  placeholder="请输入收货人电话" placeholder-class="placeholder" /></view>
+  </view>
+  <view class="row flex b-b sizing">
+    <view class="left">所在地区</view>
+    <view class="right flex-box" bindtap="selectHandle">
+      <text wx:if="{{location}}" class="location sizing">{{location}}</text>
+      <text wx:else class="placeholder">请选择</text>
+    </view>
+  </view>
+  <view class="row flex b-b sizing">
+    <view class="left">详细地址</view>
+    <view class="right flex-box"><input  placeholder="街道 门牌号等" placeholder-class="placeholder" /></view>
+  </view>
+</view>
+
+<view class="add_address f-bg f31 black"> 
+  <view class="row flex b-b sizing">
+    <view class="left">设为默认地址</view>
+    <view class="right flex-box">
+      <view class="icon_wrap flex radius-50 {{set_default ? 'm-bg':''}}" bindtap="setDefaultHandle"><span wx:if="{{set_default}}" class='iconfont iconzhengque white f28'></span></view>
+    </view>
+  </view>
+</view>
+
+<view class="height"></view>
+<view class="save fixed f32 t-c m-bg white ">保存</view>

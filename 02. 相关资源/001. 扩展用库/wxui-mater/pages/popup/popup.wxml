@@ -1,0 +1,39 @@
+<!--pages/popup/popup.wxml-->
+<view class="popup-wrap t-c sizing flex flex-x-center flex-dir-column p-24">
+  <button class="item f-30 col-3 m-24" type='primary' bindtap="textHandle">富文本弹窗</button> 
+  <button class="item f-30 col-3 m-24" type='primary' bindtap="formHandle">表单弹窗</button> 
+</view>
+
+<!-- 富文本弹窗 -->
+<view class="popup-info fixed" wx:if="{{textStatus}}">
+  <view class="mask"></view>
+  <view class="content absolute sizing animated f-bg radius-8">
+    <span class='iconfont iconcuowu sub-gray f-32 absolute' bindtap="textHandle"></span>
+    <view class="tit col-3 f-34 t-c">标题</view>
+    <view class="rich-text"><rich-text nodes="{{nodes}}" class="info gray f-30"></rich-text></view>
+  </view>
+</view>
+
+<!-- 表单弹窗 -->
+<view class="popup-info fixed" wx:if="{{formStatus}}"> 
+  <view class="mask"></view>
+  <form bindsubmit="formSubmit">
+    <view class="content absolute sizing f-bg radius-8">
+      <span class='iconfont iconcuowu sub-gray f-32 absolute' bindtap="formHandle"></span>
+      <view class="tit col-3 f-32 t-c col-3 bold">管理员认证</view>
+      <view class="row flex f-28 sizing raduis-10 p-24">
+        <text>姓名</text>
+        <input class="flex-box col-3 f-28" type="text" name="name" placeholder="请输入姓名" placeholder-class="placeholder"></input>
+      </view>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="row flex f-28 sizing raduis-10 p-24">
+        <text>电话</text>
+        <input class="flex-box col-3 f-28 t-l" type="number" placeholder="点击获取手机号" placeholder-class="placeholder" name="phone" value="{{phone}}" disabled="false"></input>
+      </button>
+      <view class="row flex f-28 sizing raduis-10 p-24">
+        <text>选择地区</text>
+        <picker class="flex-box col-3 f-28" mode="region" bindchange="bindRegionChange" name="region" value="{{region}}" custom-item="{{customItem}}">{{region[0]}}，{{region[1]}}，{{region[2]}}</picker>
+      </view>
+      <button class="btn white f32 t-c radius-10" formType="submit">立即认证</button>
+    </view>
+  </form>
+</view>

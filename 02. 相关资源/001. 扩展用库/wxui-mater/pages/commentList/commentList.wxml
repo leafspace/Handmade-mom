@@ -1,0 +1,120 @@
+<!--pages/commentList/commentList.wxml-->
+<view class="commentList f-bg sizing">
+  <view class="all f34 black b-b">全部评价({{allCount}})</view>
+  <view class="select flex">
+    <view class="item t-c f26 black sizing {{current == 1 ? 'active':''}}"><text class="radius-50 sizing {{current == 1 ? 'white m-b-b m-bg':'g-bg m-b-b2'}}" data-num='1' bindtap="selectHandle">全部</text></view>
+    <view class="item t-c f26 black sizing {{current == 2 ? 'active':''}}"><text class="radius-50 sizing {{current == 2 ? 'white m-b-b m-bg':'g-bg m-b-b2'}}" data-num='2' bindtap="selectHandle">好评</text></view>
+    <view class="item t-c f26 black sizing {{current == 3 ? 'active':''}}"><text class="radius-50 sizing {{current == 3 ? 'white m-b-b m-bg':'g-bg m-b-b2'}}" data-num='3' bindtap="selectHandle">中评</text></view>
+    <view class="item t-c f26 black sizing {{current == 4 ? 'active':''}}"><text class="radius-50 sizing {{current == 4 ? 'white m-b-b m-bg':'g-bg m-b-b2'}}" data-num='4' bindtap="selectHandle">差评</text></view>
+    <view class="item t-c f26 black sizing {{current == 5 ? 'active':''}}"><text class="radius-50 sizing {{current == 5 ? 'white m-b-b m-bg':'g-bg m-b-b2'}}" data-num='5' bindtap="selectHandle">看图</text></view>
+  </view>
+</view>
+
+<view class="appraise_wrap f-bg sizing">
+  <!-- 全部 -->
+  <view class="appraise" wx:if="{{current == 1}}">
+    <view class="item b-b sizing flex">
+      <image class="logo radius-50" src="/img/logo.jpg"></image>
+      <view class="info_wrap flex-box">
+        <view class="row flex">
+          <view class="left flex-box">
+            <view class="f32 col-m">可可</view>
+            <view class="f22 gray">2019-10-28 13:17:36</view>
+          </view>
+          <view class="right flex">
+            <text class="m-bg white f22 radius-8">好评</text>
+            <view class="star flex-box flex">
+              <span class="iconfont {{score >= 1 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='1' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 2 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='2' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 3 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='3' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 4 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='4' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 5 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='5' bindtap='starHandle'></span>
+            </view>
+          </view>
+        </view>
+        <view class="tag flex">
+          <text>商品丰富</text>
+          <text>送装无忧</text>
+        </view>
+        <view class="intro">效果不错，漂亮</view>
+        <view class="img_wrap flex">
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="item b-b sizing flex">
+      <image class="logo radius-50" src="/img/logo.jpg"></image>
+      <view class="info_wrap flex-box">
+        <view class="row flex">
+          <view class="left flex-box">
+            <view class="f32 col-m">可可</view>
+            <view class="f22 gray">2019-10-28 13:17:36</view>
+          </view>
+          <view class="right flex">
+            <text class="m-bg white f22 radius-8">好评</text>
+            <view class="star flex-box flex">
+              <span class="iconfont {{score >= 1 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='1' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 2 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='2' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 3 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='3' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 4 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='4' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 5 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='5' bindtap='starHandle'></span>
+            </view>
+          </view>
+        </view>
+        <view class="tag flex">
+          <text>商品丰富</text>
+          <text>送装无忧</text>
+        </view>
+        <view class="intro">效果不错，漂亮</view>
+        <view class="img_wrap flex">
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 好评 -->
+  <view class="appraise" wx:if="{{current == 2}}">
+    <view class="item b-b sizing flex">
+      <image class="logo radius-50" src="/img/logo.jpg"></image>
+      <view class="info_wrap flex-box">
+        <view class="row flex">
+          <view class="left flex-box">
+            <view class="f32 col-m">可可</view>
+            <view class="f22 gray">2019-10-28 13:17:36</view>
+          </view>
+          <view class="right flex">
+            <text class="m-bg white f22 radius-8">好评</text>
+            <view class="star flex-box flex">
+              <span class="iconfont {{score >= 1 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='1' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 2 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='2' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 3 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='3' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 4 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='4' bindtap='starHandle'></span>
+              <span class="iconfont {{score >= 5 ? 'f28 col-m iconstar':' f28 gray iconwujiaoxing2'}}" data-num='5' bindtap='starHandle'></span>
+            </view>
+          </view>
+        </view>
+        <view class="tag flex">
+          <text>商品丰富</text>
+          <text>送装无忧</text>
+        </view>
+        <view class="intro">效果不错，漂亮</view>
+        <view class="img_wrap flex">
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+          <image src="/img/goods.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

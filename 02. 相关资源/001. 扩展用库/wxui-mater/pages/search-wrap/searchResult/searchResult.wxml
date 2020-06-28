@@ -1,0 +1,15 @@
+<!--pages/searchResult/searchResult.wxml-->
+<view class="search-main flex p-30 b-b">
+  <view class="search-wrap flex flex-box g-bg radius-50 sizing" bindtap='searchHandle'>
+    <span class='iconfont iconsousuo1 gray f30'></span>
+    <input class="flex-box f28" value="{{value}}" placeholder="搜索你喜欢的商品" placeholder-class="placeholder"></input>
+  </view>
+  <text class="text f28 gray ml-12" bindtap="searchResult">搜索</text>
+</view>
+
+<view class="search-result">
+  <view class="no-content flex">
+    <span class='iconfont iconzanwushuju3 gray'></span>
+    <text class="gray f26">暂无数据</text>
+  </view>
+</view>

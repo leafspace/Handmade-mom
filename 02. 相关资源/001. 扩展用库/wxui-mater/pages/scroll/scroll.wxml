@@ -1,0 +1,10 @@
+<!--pages/scroll/scroll.wxml-->
+<scroll-view class="scroll_wrap sizing" scroll-x="true" bindscroll="scroll" style="width: 100vw">
+  <block wx:for="{{banner}}" wx:key="*this">
+    <view class="item radius-10">
+      <image src="{{item.url}}"  mode="widthFix"></image>
+      <text class="name">锐驰</text>
+      <text class="info">家具丨原创丨设计</text>
+    </view>
+  </block>
+</scroll-view>

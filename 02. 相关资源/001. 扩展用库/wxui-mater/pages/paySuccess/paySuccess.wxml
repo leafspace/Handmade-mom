@@ -1,0 +1,18 @@
+<!--pages/paySuccess/paySuccess.wxml-->
+<view class="pay_success">
+  <view class="info t-c sizing">
+    <text class="f32">支付成功</text>
+    <view class="total flex"><text class="rmb">￥</text>0.00</view>
+  </view>
+  <view class="discount">
+    <view class="item flex f28 gray b-b">
+      <text>余额支付</text>
+      <text>2019-10-28 15:21:38</text>
+    </view>
+  </view>
+  <view class="advertising relative">
+    <image src="/img/adv.png" mode="widthFix"></image>
+    <text class="absolute flex white f26 radius-8">广告</text>
+  </view>
+  <button class="back radius-10 f34" bindtap="toIndexHandle">返回首页</button>
+</view>
