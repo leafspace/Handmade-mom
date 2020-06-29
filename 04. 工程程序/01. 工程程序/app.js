@@ -1,4 +1,15 @@
 //app.js
+
+/**
+ * tabBar页面路径列表 (用于链接跳转时判断)
+ * tabBarLinks为常量, 无需修改
+ */
+const tabBarLinks = [
+  "pages/index/index",
+  "pages/mall/mall",
+  "pages/mine/mine"
+];
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,5 +46,38 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+
+  
+  /**
+   * 获取tabBar页面路径列表
+   */
+  getTabBarLinks() {
+    return tabBarLinks;
+  },
+
+  /**
+   * 跳转到指定页面
+   * 支持tabBar页面
+   */
+  navigationTo(url) {
+    if (!url || url.length == 0) {
+      wx.showToast({
+        title: '即将开放，敬请期待',
+        icon: "none"
+      })
+    }
+    let tabBarLinks = this.getTabBarLinks();
+    // tabBar页面
+    if (tabBarLinks.indexOf(url) > -1) {
+      wx.switchTab({
+        url: '/' + url
+      });
+    } else {
+      // 普通页面
+      wx.navigateTo({
+        url: '/' + url
+      });
+    }
+  },
 })

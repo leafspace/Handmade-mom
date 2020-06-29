@@ -1,0 +1,16 @@
+/* components/banner/banner.wxss */
+/* 使用 :host 选择器 指定它所在节点的默认样式 */
+:host {
+  color: burlywood;
+  font-size: 32rpx;
+}
+
+.swiper{width: calc(100vw - 48rpx);height: 230rpx;}
+.swiper image{display: block;width: 100%;height: auto;}
+.swiper-custom-wrap{position: relative;}
+.current-dot{position: absolute;right: 12rpx;bottom: 12rpx;background-color: rgba(0,0,0,.45);line-height: 35rpx;padding: 0 15rpx;}
+
+.customVlue{color: pink;margin: 30rpx;}
+.internalValue{color: royalblue;margin: 30rpx;}
+button{margin: 30rpx;}
+ 
