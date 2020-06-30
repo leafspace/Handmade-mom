@@ -20,7 +20,7 @@
   },
   "tabBar": {
     "backgroundColor": "#fff",
-    "borderStyle": "#D2D2D2",
+    "borderStyle": "white",
     "color": "#333",
     "selectedColor": "#ff5f19",
     "list": [
@@ -43,5 +43,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

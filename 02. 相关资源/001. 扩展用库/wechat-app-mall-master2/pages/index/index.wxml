@@ -12,6 +12,7 @@
         </swiper-item>
       </block>
   </swiper>
+  
   <view class='icon'>
     <navigator hover-class="none" url="/pages/list/index?title=生日&id=5b8e37e34b640a63b33272dc">
       <image src='/images/birthday.png' mode="aspectFit"></image>
