@@ -1,23 +1,28 @@
-package cn.qxcy.HandMadeMom;
+package com.cn.qxcy.HandMadeMom.Servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
+import com.cn.qxcy.HandMadeMom.ToolBean.ClientRequest.ImgUrls;
+
 
 /**
- * Servlet implementation class TestServelt
+ * Servlet implementation class HomeGetBannerImageServlet
  */
-@WebServlet("/TestServelt")
-public class TestServelt extends HttpServlet {
+@WebServlet("/home/getBannerImage")
+public class HomeGetBannerImageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TestServelt() {
+    public HomeGetBannerImageServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +32,19 @@ public class TestServelt extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		ImgUrls bannerA = new ImgUrls("", "http://localhost:8080/HandMadeMom/media/image/card-bg-3.jpg");
+		ImgUrls bannerB = new ImgUrls("", "http://localhost:8080/HandMadeMom/media/image/card-bg-3.jpg");
+		ImgUrls bannerC = new ImgUrls("", "http://localhost:8080/HandMadeMom/media/image/card-bg-3.jpg");
+		
+		ArrayList<ImgUrls> listBannerImgUrls = new ArrayList<ImgUrls>();
+		listBannerImgUrls.add(bannerA);
+		listBannerImgUrls.add(bannerB);
+		listBannerImgUrls.add(bannerC);
+		
+		Gson gson = new Gson();
+		String strRet = gson.toJson(listBannerImgUrls);
+		
+		response.getWriter().append(strRet);
 	}
 
 	/**

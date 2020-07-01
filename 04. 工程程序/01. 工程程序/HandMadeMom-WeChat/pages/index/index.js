@@ -126,20 +126,13 @@ Page({
   getRecommendList: function () {
     var that = this
     wx.request({
-      url: 'http://localhost:80/HandMadeMom/home/getRecommendList',
+      url: 'http://localhost:8080/HandMadeMom/home/getRecommendList',
       data: {},
       method: 'GET',
       success: function (res) {
-        if (res.code == 200)
-          if (res.data.recommendList.length > 0) {
-            let list = this.data.recommendList
-            for (let i = 0; i < res.data.list.length; i++) {
-              list.push(res.data.recommendList[i])
-            }
-            that.setData({
-              recommendList: list,
-            });
-          }
+        if (res.statusCode == 200) {
+          that.setData({ recommendList: res.data });
+        }
 
         console.log(res.data);
       },
@@ -147,31 +140,27 @@ Page({
       fail: function (res) {
         console.log(res.data);
       },
-
-      complete: function (res) {
-        console.log(res.data);
-      }
-
     })
   },
 
   getBannerImage: function () {
+    var that = this
     wx.request({
-      url: 'http://localhost:80/HandMadeMom/home/getBannerImage',
+      url: 'http://localhost:8080/HandMadeMom/home/getBannerImage',
       data: {},
       method: 'GET',
+      header: { 'Content-Type': 'application/json' },
+
       success: function (res) {
-        this.setData({ imgUrls: res.data });
+        if (res.statusCode == 200) {
+          that.setData({ imgUrls: res.data });
+        }
         console.log(res.data);
       },
 
       fail: function (res) {
         console.log(res.data);
       },
-
-      complete: function (res) {
-        console.log(res.data);
-      }
     })
   },
 
