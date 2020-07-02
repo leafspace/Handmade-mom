@@ -3,7 +3,7 @@
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}">
         <swiper-item>
-          <image src='{{item.imgUrl}}' style='height:60vh;' />
+          <image src='{{item.imgUrl}}' style="width:100%; height:100%;"/>
         </swiper-item>
       </block>
     </swiper>
@@ -16,31 +16,29 @@
       {{goodsInfo.price}}
     </view>
     <view class='freight'>
-      <view class='left'>运费:￥{{goodsInfo.freightPrice}}</view>
-      <view class='right'>余量：{{goodsInfo.remainNum}}</view>
+      <view class='left'>运费:￥{{goodsInfo.goodsFreightPrice}}</view>
+      <view class='right'>余量：{{goodsInfo.goodsRemainNum}}</view>
     </view>
     <view class='tab'>
-      <view class='left' bindtap="tabFun" goodsInfo-state="{{1}}">
+      <view class='left' bindtap="tabFun" data-state="{{1}}">
         <text class='{{tabIs?"tab-acitve":""}}'>产品详情</text>
       </view>
-      <view class='right' bindtap="tabFun" goodsInfo-state="{{2}}">
+      <view class='right' bindtap="tabFun" data-state="{{2}}">
         <text class='{{!tabIs?"tab-acitve":""}}'>制作教程</text>
       </view>
     </view>
-    <view class='content' wx:if="{{tabIs}}">
-      产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情 产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情产品详情
-    </view>
-    <view class='content' wx:if="{{!tabIs}}">售后保障</view>
+    <view class='content' wx:if="{{tabIs}}">{{goodsInfo.goodsDetailsText}}</view>
+    <view class='content' wx:if="{{!tabIs}}">{{goodsInfo.goodsTotorialText}}</view>
   </scroll-view>
   <view class='bottom'>
     <view class='icon' bindtap='goShopCar'>
       <image src='/img/shopping_cart_return.png' style='width:20px;height:17px;'></image>
       <text>购物车</text>
     </view>
-    <!-- bindtap='specFun' -->
     <view class='btn' bindtap='addCart'>加入购物车</view>
-    <view class='btn' style='background: #FE4543;' bindtap='specFun'>立即购买</view>
+    <view class='btn' style='background: #FE4543;' bindtap='doCreateOrder'>立即购买</view>
   </view>
+  <!--
   <view class='popup' wx:if="{{specIs}}">
     <view class='title'>
       <view class='img'>
@@ -78,6 +76,7 @@
         </view>
       </view>
     </scroll-view>
-    <view class='btn' bindtap='specFun'>下一步</view>
+    <view class='btn' bindtap='doCreateOrder'>下一步</view>
   </view>
+  -->
 </view>

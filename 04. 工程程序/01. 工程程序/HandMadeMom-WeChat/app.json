@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/cart/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/orderDetails/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
