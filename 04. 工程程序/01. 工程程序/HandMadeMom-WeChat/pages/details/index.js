@@ -3,7 +3,7 @@ const app = getApp()
 
 Page({
   data: {
-    imgUrls: [
+    goodsImgUrls: [
       {
         targetUrl: '',
         imgUrl: '/img/20200702164950.jpg'
@@ -17,17 +17,19 @@ Page({
         imgUrl: '/img/20200702165026.jpg'
       }
     ],
+
+    goodsId: 0,
+
     goodsInfo: {
-      title: '商品名ABCDEF',
-      spec: 'good',
+      goodsTitle: '商品名ABCDEF',
+      goodsSpec: 'good',
       goodsFreightPrice: 8,
       goodsRemainNum: 3224,
-      price: 999,
-      state: 1,
+      goodsPrice: 999,
       goodsDetailsText: '我是产品详情',
-      goodsDetailsImgUrls: [],
+      goodsDetailsVedioUrls: [],
       goodsTotorialText: '我是制作教程',
-      goodsTotorialImgUrls: [],
+      goodsTotorialVedioUrls: [],
     },
 
     indicatorDots: true,
@@ -39,6 +41,7 @@ Page({
     previousMargin: 0,
     nextMargin: 0,
 
+    state: 1,  //1是产品详情，2是制作教程
     tabIs: true,
   },
 
@@ -53,7 +56,7 @@ Page({
       })
     }
 
-    console.log(e);
+    console.log(event);
   },
 
   goShopCar: function () {
@@ -62,11 +65,11 @@ Page({
     });
   },
 
-  addCart: function (event) {
+  addCart: function () {
     wx.request({
       url: 'http://localhost:8080/HandMadeMom/home/addCart',
       data: {
-        goodsId: goodsInfo.goodsId,
+        goodsId: this.data.goodsId,
       },
       method: 'POST',
       header: { 'content-type': 'application/x-www-form-urlencoded' },
@@ -95,11 +98,51 @@ Page({
   },
 
   onLoad: function (options) {
-    app.http('v1/home/getItem', { id: options.id })
-      .then(res => {
-        this.setData({
-          data: res.data
-        })
-      })
-  },
+    var that = this
+
+    that.setData({
+      goodsId: options.goodsId,
+    })
+
+    wx.request({
+      url: 'http://localhost:8080/HandMadeMom/details/getGoodsInfo',
+      data: {
+        goodsId: this.data.goodsId,
+      },
+      method: 'GET',
+      header: { 'content-type': 'application/json' },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          that.setData({ goodsInfo: res.data });
+        }
+
+        console.log(res.data);
+      },
+
+      fail: function (res) {
+        console.log(res.data);
+      },
+    })
+
+
+    wx.request({
+      url: 'http://localhost:8080/HandMadeMom/details/getGoodsInfoImage',
+      data: {
+        goodsId: this.data.goodsId,
+      },
+      method: 'GET',
+      header: { 'content-type': 'application/json' },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          that.setData({ goodsImgUrls: res.data });
+        }
+
+        console.log(res.data);
+      },
+
+      fail: function (res) {
+        console.log(res.data);
+      },
+    })
+  }
 })

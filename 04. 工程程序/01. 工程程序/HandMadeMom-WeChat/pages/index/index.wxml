@@ -21,7 +21,7 @@
     <view class='list'>
       <view class='item' wx:for="{{recommendList}}" wx:key="*this">
         <view class='item-show'>
-          <navigator hover-class="none" url="/pages/details/index?id={{item.goodsId}}">
+          <navigator hover-class="none" url="/pages/details/index?goodsId={{item.goodsId}}">
             <image class='product' src='{{item.goodsImgUrl}}'></image>
             <text class='text'>{{item.goodsTitle}}</text>
           </navigator>

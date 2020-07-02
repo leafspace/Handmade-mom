@@ -1,19 +1,19 @@
 <view style='height:100vh;'>
   <scroll-view scroll-y style='height:92vh'>
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}">
+      <block wx:for="{{goodsImgUrls}}" wx:key="*this">
         <swiper-item>
           <image src='{{item.imgUrl}}' style="width:100%; height:100%;"/>
         </swiper-item>
       </block>
     </swiper>
     <view class='title'>
-      {{goodsInfo.title}}
-      <view class='spec'>{{goodsInfo.spec}}</view>
+      {{goodsInfo.goodsTitle}}
+      <view class='spec'>{{goodsInfo.goodsSpec}}</view>
     </view>
     <view class='price'>
       <text>￥</text>
-      {{goodsInfo.price}}
+      {{goodsInfo.goodsPrice}}
     </view>
     <view class='freight'>
       <view class='left'>运费:￥{{goodsInfo.goodsFreightPrice}}</view>
@@ -28,7 +28,10 @@
       </view>
     </view>
     <view class='content' wx:if="{{tabIs}}">{{goodsInfo.goodsDetailsText}}</view>
-    <view class='content' wx:if="{{!tabIs}}">{{goodsInfo.goodsTotorialText}}</view>
+    <view class='content' wx:if="{{!tabIs}}">
+      <text>{{goodsInfo.goodsTotorialText}}</text>
+      <video src="{{goodsInfo.goodsTotorialVedioUrls.vedioUrl}}"></video>
+      </view>
   </scroll-view>
   <view class='bottom'>
     <view class='icon' bindtap='goShopCar'>
