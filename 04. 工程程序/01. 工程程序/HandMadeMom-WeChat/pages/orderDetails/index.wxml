@@ -30,7 +30,7 @@
         <view>{{address.city[0]}} {{address.city[1]}} {{address.city[2]}} {{address.detailed}}</view>
       </view>
        <view class='choice'>
-        <image style='width:8px;height:15px;' src='/images/my_order.png'></image>
+        <image style='width:8px;height:15px;' src='/img/my_order.png'></image>
       </view>
     </navigator>
     <view class='title' style='border-top:1px solid #dedede;'>
@@ -38,7 +38,7 @@
         发票信息
       </view>
       <view class='right'>
-        <image src='/images/my_order.png'></image>
+        <image src='/img/my_order.png'></image>
       </view>
     </view>
     <view class='title'>
@@ -47,7 +47,7 @@
       </view>
       <view class='right'>
         <text>满200减50优惠券</text>
-        <image src='/images/my_order.png'></image>
+        <image src='/img/my_order.png'></image>
       </view>
     </view>
     <view class='title'>

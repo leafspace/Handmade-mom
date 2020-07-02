@@ -8,7 +8,7 @@ Page({
   data: {
     list: [{ //商品列表
       id: 2,
-      img: 'https://wx.yogalt.com/file/images/img1.jpeg',
+      img: 'https://wx.yogalt.com/file/img/img1.jpeg',
       name: "榴恋草莓蛋糕-2磅188元/138元/4磅298元（深圳）",
       spec: "2磅，+19.9元得水果（中盒）…",
       price: 999.00,
@@ -17,7 +17,7 @@ Page({
     },
     {
       id: 3,
-      img: 'https://wx.yogalt.com/file/images/img1.jpeg',
+      img: 'https://wx.yogalt.com/file/img/img1.jpeg',
       name: "榴恋草莓蛋糕-2磅188元/138元/4磅298元（深圳）",
       spec: "2磅，+19.9元得水果（中盒）…",
       price: 999.01,

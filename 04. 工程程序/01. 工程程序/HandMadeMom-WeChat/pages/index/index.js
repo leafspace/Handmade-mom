@@ -51,7 +51,6 @@ Page({
         goodsPrice: '999',
       }
     ],
-    baseUrl: "",
     indicatorDots: true,
     vertical: false,
     autoplay: true,
@@ -89,7 +88,7 @@ Page({
     })
   },
 
-  addCart: function(event) {
+  addCart: function (event) {
     wx.request({
       url: 'http://localhost:8080/HandMadeMom/home/addCart',
       data: {

@@ -1,5 +1,5 @@
 page {
-  background-color: #F8F8F8;
+  background-color: #EEEEEE;
   height: 100%;
   font-size: 32rpx;
   line-height: 1.6;
@@ -13,18 +13,18 @@ page {
 }
 
 .page-tip {
-  border-top:1px solid #EDEDED; 
+  border-top:1px solid #757575; 
+  border-bottom:1px solid #757575; 
+  background-color: #FFFFFF;
   margin-top: 10px;
   width: 100%;
 }
 
 .page-body {
-  border-top:1px solid #EDEDED; 
   width: 100%;
 }
 
 .page-foot {
-  border-top:1px solid #EDEDED; 
   position: fixed;
   width: 100%;
   height: 20px;
@@ -52,51 +52,6 @@ swiper{
   height: 100%;
 }
 
-.demo-text-1{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: #1AAD19;
-  color: #FFFFFF;
-  font-size: 36rpx;
-}
-.demo-text-1:before{
-  content: 'A';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.demo-text-2{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: #2782D7;
-  color: #FFFFFF;
-  font-size: 36rpx;
-}
-.demo-text-2:before{
-  content: 'B';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.demo-text-3{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background-color: #F1F1F1;
-  color: #353535;
-  font-size: 36rpx;
-}
-.demo-text-3:before{
-  content: 'C';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 .img{
   border-top: 1px solid #EDEDED;
   border-bottom: 1px solid #EDEDED;
@@ -104,7 +59,7 @@ swiper{
 .img image{
   display: block;
   border-bottom: 1px solid #EDEDED;
-}d5e7f5d5e7f5d5e7f5d5e7f5
+}
 .title{
   padding: 10px 0px;
 }
@@ -155,13 +110,13 @@ swiper{
   box-sizing: content-box;
 }
 .list .item{
-  flex:0 1 50%;
-  /* border-bottom:1px solid #EDEDED;  */
-  padding-top: 15px;
+  width: 50%;
 }
-.list .item:nth-child(odd){
-  /* border-right:1px solid #EDEDED;  */
-  margin-right: -1px;
+
+.list .item .item-show{
+  background-color: #FFFFFF;
+  margin: 7px;
+  border-radius: 7px;
 }
 
 .list .item .text{
@@ -173,10 +128,12 @@ swiper{
 
 .list .item .product{
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 95%;
+  height: 175px;
   margin: 0 auto;
+  padding-top: 7px;
 }
+
 .price{
   display: flex;
   margin:0 10px;

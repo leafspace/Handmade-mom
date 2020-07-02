@@ -23,7 +23,7 @@
         </view>
       </picker>
       <view class='icon'>
-      <image src='/images/my_order.png'></image>
+      <image src='/img/my_order.png'></image>
       </view>
     </view>
      <view class='item'>

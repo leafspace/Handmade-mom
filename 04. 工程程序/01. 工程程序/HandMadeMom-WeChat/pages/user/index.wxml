@@ -13,24 +13,24 @@
     </view>
     <view class='right'>
       <text>查看全部订单</text>
-      <image src='/images/my_order.png'></image>
+      <image src='/img/my_order.png'></image>
     </view>
   </navigator>
   <view class='icon'>
     <navigator url="/pages/order/index?type=1" hover-class="none" >
-      <image src='/images/pending_payment.png' mode="aspectFit"></image>
+      <image src='/img/pending_payment.png' mode="aspectFit"></image>
       <text>代付款</text>
     </navigator>
     <navigator url="/pages/order/index?type=2" hover-class="none" >
-      <image src='/images/pending_delivery.png' mode="aspectFit"></image>
+      <image src='/img/pending_delivery.png' mode="aspectFit"></image>
       <text>代发货</text>
     </navigator>
     <navigator url="/pages/order/index?type=3" hover-class="none" >
-      <image src='/images/already_shipped.png' mode="aspectFit"></image>
+      <image src='/img/already_shipped.png' mode="aspectFit"></image>
       <text>已发货</text>
     </navigator>
     <navigator url="/pages/order/index?type=4" hover-class="none" >
-      <image src='/images/completed.png' mode="aspectFit"></image>
+      <image src='/img/completed.png' mode="aspectFit"></image>
       <text>已完成</text>
     </navigator>
   </view>
@@ -39,7 +39,7 @@
       我的优惠券
     </view>
     <view class='right'>
-      <image src='/images/my_order.png'></image>
+      <image src='/img/my_order.png'></image>
     </view>
   </navigator>
   <navigator url="/pages/addressList/index" class='item'>
@@ -47,7 +47,7 @@
       地址管理
     </view>
     <view class='right'>
-      <image src='/images/my_order.png'></image>
+      <image src='/img/my_order.png'></image>
     </view>
   </navigator>
 </scroll-view>

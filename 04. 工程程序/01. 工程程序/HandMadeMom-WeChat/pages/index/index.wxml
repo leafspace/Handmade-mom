@@ -5,7 +5,7 @@
       <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
         <block wx:for="{{imgUrls}}" wx:key="*this">
           <swiper-item>
-            <image src='{{baseUrl+item.imgUrl}}' data-url='{{item.targetUrl}}'/>
+            <image src='{{item.imgUrl}}' data-url='{{item.targetUrl}}' />
           </swiper-item>
         </block>
       </swiper>
@@ -20,14 +20,16 @@
   <view class="page-body">
     <view class='list'>
       <view class='item' wx:for="{{recommendList}}" wx:key="*this">
-        <navigator hover-class="none" url="/pages/details/index?id={{item.goodsId}}">
-          <image class='product' src='{{item.goodsImgUrl}}'></image>
-          <text class='text'>{{item.goodsTitle}}</text>
-        </navigator>
-        <view class='price'>
-          <text>￥{{item.goodsPrice}}</text>
-          <view bindtap='addCart' data-goodsid="{{item.goodsId}}">
-            <image src='/img/Shopping.png'></image>
+        <view class='item-show'>
+          <navigator hover-class="none" url="/pages/details/index?id={{item.goodsId}}">
+            <image class='product' src='{{item.goodsImgUrl}}'></image>
+            <text class='text'>{{item.goodsTitle}}</text>
+          </navigator>
+          <view class='price'>
+            <text>￥{{item.goodsPrice}}</text>
+            <view bindtap='addCart' data-goodsid="{{item.goodsId}}">
+              <image src='/img/Shopping.png'></image>
+            </view>
           </view>
         </view>
       </view>
