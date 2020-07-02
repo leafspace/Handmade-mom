@@ -26,7 +26,7 @@
         </navigator>
         <view class='price'>
           <text>￥{{item.goodsPrice}}</text>
-          <view bindtap='addCart' data-item="{{item}}">
+          <view bindtap='addCart' data-goodsid="{{item.goodsId}}">
             <image src='/img/Shopping.png'></image>
           </view>
         </view>

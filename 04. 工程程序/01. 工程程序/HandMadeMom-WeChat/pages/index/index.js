@@ -89,24 +89,21 @@ Page({
     })
   },
 
-  addCart(data) {
+  addCart: function(event) {
     wx.request({
-      url: 'http://localhost:80/HandMadeMon/home/addCart',
+      url: 'http://localhost:8080/HandMadeMom/home/addCart',
       data: {
-        goodsId: item.goodsId,
-        goodsNum: 1,
-        goodsSpec: '',
-        goodsTitle: item.goodsTitle,
-        goodsImgUrl: item.goodsImgUrl,
-        goodsPrice: item.price
+        goodsId: event.currentTarget.dataset.goodsid,
       },
       method: 'POST',
+      header: { 'content-type': 'application/x-www-form-urlencoded' },
       success: function (res) {
-        wx.showToast({
-          title: '已加入购物车',
-          icon: 'success',
-          duration: 500
-        })
+        if (res.statusCode == 200) {
+          wx.showToast({
+            title: '已加入购物车',
+            duration: 500
+          })
+        }
 
         console.log(res.data);
       },
@@ -114,11 +111,6 @@ Page({
       fail: function (res) {
         console.log(res.data);
       },
-
-      complete: function (res) {
-        console.log(res.data);
-      }
-
     })
 
   },
@@ -129,6 +121,7 @@ Page({
       url: 'http://localhost:8080/HandMadeMom/home/getRecommendList',
       data: {},
       method: 'GET',
+      header: { 'content-type': 'application/json' },
       success: function (res) {
         if (res.statusCode == 200) {
           that.setData({ recommendList: res.data });
