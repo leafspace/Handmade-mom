@@ -15,9 +15,9 @@ Page({
     })
     this.getList()
   },
-  getList(){
+  getList() {
     app.http('/v1/order/list', { state: this.data.tabIndex }).then(res => {
-      this.setData({list:res.data})
+      this.setData({ list: res.data })
     })
   },
   /**
@@ -25,7 +25,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      tabIndex: options.type||1
+      tabIndex: options.type || 1
     })
     this.getList()
   },

@@ -3,7 +3,7 @@
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{goodsImgUrls}}" wx:key="*this">
         <swiper-item>
-          <image src='{{item.imgUrl}}' style="width:100%; height:100%;"/>
+          <image src='{{item.imgUrl}}' style="width:100%; height:100%;" />
         </swiper-item>
       </block>
     </swiper>
@@ -31,7 +31,7 @@
     <view class='content' wx:if="{{!tabIs}}">
       <text>{{goodsInfo.goodsTotorialText}}</text>
       <video src="{{goodsInfo.goodsTotorialVedioUrls.vedioUrl}}"></video>
-      </view>
+    </view>
   </scroll-view>
   <view class='bottom'>
     <view class='icon' bindtap='goShopCar'>
@@ -41,8 +41,7 @@
     <view class='btn' bindtap='addCart'>加入购物车</view>
     <view class='btn' style='background: #FE4543;' bindtap='doCreateOrder'>立即购买</view>
   </view>
-  <!--
-  <view class='popup' wx:if="{{specIs}}">
+  <!-- <view class='popup' wx:if="{{specIs}}">
     <view class='title'>
       <view class='img'>
         <image src='https://wx.yogalt.com/file/img/img1.jpeg'></image>
@@ -80,6 +79,5 @@
       </view>
     </scroll-view>
     <view class='btn' bindtap='doCreateOrder'>下一步</view>
-  </view>
-  -->
+  </view> -->
 </view>

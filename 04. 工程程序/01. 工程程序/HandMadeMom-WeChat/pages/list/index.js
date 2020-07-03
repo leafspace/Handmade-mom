@@ -7,12 +7,12 @@ Page({
    */
   data: {
     list: [],
-    sortActive:0,
+    sortActive: 0,
     sortState: true,
-    price:false,
-    flavor:false,
-    mount:false,
-    page:1
+    price: false,
+    flavor: false,
+    mount: false,
+    page: 1
   },
   addCart(data) {
     let item = data.currentTarget.dataset.item
@@ -40,12 +40,12 @@ Page({
       sortActive: data.currentTarget.dataset.data,
     })
 
-    if (data.currentTarget.dataset.data == 1){
+    if (data.currentTarget.dataset.data == 1) {
       this.setData({
         price: this.price = !this.price
       })
 
-    } else if (data.currentTarget.dataset.data == 2){
+    } else if (data.currentTarget.dataset.data == 2) {
       this.setData({
         flavor: this.flavor = !this.flavor
       })
@@ -57,7 +57,7 @@ Page({
 
     }
   },
-  getList:function(data){
+  getList: function (data) {
     app.http('v1/home/getList', {
       page: this.data.page,
       category: data.id
@@ -87,53 +87,53 @@ Page({
     console.log(e)
     this.getList(e)
   },
-  
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

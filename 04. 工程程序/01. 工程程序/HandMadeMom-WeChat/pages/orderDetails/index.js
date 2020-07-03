@@ -24,20 +24,20 @@ Page({
       num: 1,
       select: false
     }],
-    address:null,
-    data:null
+    address: null,
+    data: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
     console.log(options)
-    app.http('v1/order/get', { id: options.id},"POST").then(res=>{
+    app.http('v1/order/get', { id: options.id }, "POST").then(res => {
       console.log(res)
-      if(res.code == 200){
-        this.setData({data:res.data})
+      if (res.code == 200) {
+        this.setData({ data: res.data })
       }
     })
   },
