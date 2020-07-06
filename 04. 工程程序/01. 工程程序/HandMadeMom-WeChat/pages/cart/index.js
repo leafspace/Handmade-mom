@@ -1,21 +1,20 @@
 const app = getApp()
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
-    total: false, //是否全选
-    totalPrice: 0, //总价
-    list: [],
+    isTotal: false, // 是否全选
+    totalPrice: 0,  // 总价
+    harvestAddress: '浙江省杭州市西湖大道', // 收获地址
+    goodsList: [],
     isEdit: false
   },
-  totalPrice() {//计算总价
+
+  totalPrice: function() {//计算总价
     let that = this
     let price = 0
-    for (let i = 0; i < that.data.list.length; i++) {
-      if (that.data.list[i].select) {
-        price = price + that.data.list[i].price * that.data.list[i].num
+    for (let i = 0; i < that.data.goodsList.length; i++) {
+      if (that.data.goodsList[i].goodsSelect) {
+        price = price + that.data.goodsList[i].goodsPrice * that.data.goodsList[i].goodsBuyNum
       }
     }
     this.setData({
@@ -23,144 +22,143 @@ Page({
     })
 
   },
+
   totalFun() { //全选
-    this.data.total = !this.data.total
-    // for (let i = 0; i < this.data.list.length; i++) {
-    //   if (this.data.total) {
-    //     this.data.list[i].select = true
-    //   }else{
-    //     this.data.list[i].select = false
-    //   }
-    // }
-    this.data.list.map((v, k) => {
-      if (this.data.total) {
-        v.select = true
+    this.data.isTotal = !this.data.isTotal
+    this.data.goodsList.map((v, k) => {
+      if (this.data.isTotal) {
+        v.goodsSelect = true
       } else {
-        v.select = false
+        v.goodsSelect = false
       }
     })
+
     this.setData({
-      list: this.data.list,
-      total: this.data.total
+      goodsList: this.data.goodsList,
+      isTotal: this.data.isTotal
     })
 
     this.totalPrice()
   },
+
   labelFun(e) {//单选
     let that = this
     let num = 0
-    for (let i = 0; i < that.data.list.length; i++) {
-      if (that.data.list[i].id == e.currentTarget.dataset.id) {
-        if (!that.data.list[i].select) {
-          that.data.list[i].select = true
-        } else {
-          that.data.list[i].select = !that.data.list[i].select
-        }
+    for (let i = 0; i < that.data.goodsList.length; i++) {
+      if (that.data.goodsList[i].goodsId == e.currentTarget.dataset.goodsid) {
+        that.data.goodsList[i].goodsSelect = !that.data.goodsList[i].goodsSelect
         that.setData({
-          list: that.data.list
+          goodsList: that.data.goodsList
         })
       }
 
-      if (that.data.list[i].select) {
+      if (that.data.goodsList[i].goodsSelect) {
         num++
-        if (num == that.data.list.length) {
-          that.setData({
-            total: true
-          })
-        } else {
-          that.setData({
-            total: false
-          })
-        }
       }
+    }
+
+    if (num == that.data.goodsList.length) {
+      that.setData({
+        isTotal: true
+      })
+    } else {
+      that.setData({
+        isTotal: false
+      })
     }
     this.totalPrice()
   },
+
   editFun() { //编辑
     this.setData({
       isEdit: !this.data.isEdit
     })
 
     if (!this.data.isEdit) {
-      console.log(this.data.list)
-      app.http('v1/order/editCart', { list: this.data.list }, "POST")
+      console.log(this.data.goodsList)
+      app.http('v1/order/editCart', { goodsList: this.data.goodsList }, "POST")
         .then(res => {
           console.log(res)
         })
     }
   },
+
   plusFun(item) { //增加商品数量
-    this.data.list.map((v, k) => {
+    this.data.goodsList.map((v, k) => {
       if (v.id == item.target.dataset.item.id) {
-        this.data.list[k].num++
+        this.data.goodsList[k].num++
       }
     })
 
     this.setData({
-      list: this.data.list
+      goodsList: this.data.goodsList
     })
 
     this.totalPrice()
   },
+
   reduceFun(item) { //减少商品数量
-    this.data.list.map((v, k) => {
+    this.data.goodsList.map((v, k) => {
       if (v.id == item.target.dataset.item.id) {
-        if (this.data.list[k].num > 1) {
-          this.data.list[k].num--
+        if (this.data.goodsList[k].num > 1) {
+          this.data.goodsList[k].num--
         }
       }
     })
     this.setData({
-      list: this.data.list
+      goodsList: this.data.goodsList
     })
 
     this.totalPrice()
   },
+
   delItemFun(item) { //删除单商品
 
     let id = item.target ? item.target.dataset.item.id : item.id
 
-    this.data.list.map((v, k) => {
+    this.data.goodsList.map((v, k) => {
       if (v.id == id) {
-        this.data.list.splice(k, 1)
+        this.data.goodsList.splice(k, 1)
       }
     })
 
     this.setData({
-      list: this.data.list
+      goodsList: this.data.goodsList
     })
 
     this.totalPrice()
   },
+
   delFun() { //选中删除
-    let list = []
+    let goodsList = []
 
-    this.data.list.map((v, k) => {
-      if (!v.select) {
-        list.push(v)
+    this.data.goodsList.map((v, k) => {
+      if (!v.goodsSelect) {
+        goodsList.push(v)
       }
     })
 
     this.setData({
-      list: list
+      goodsList: goodsList
     })
 
     this.totalPrice()
 
   },
+  
   closeFun: function () {
-    let list = []
+    let goodsList = []
     let listTotal = []
-    this.data.list.map((v, k) => {
-      if (v.select) {
-        list.push(v)
+    this.data.goodsList.map((v, k) => {
+      if (v.goodsSelect) {
+        goodsList.push(v)
       } else {
         listTotal.push(v)
       }
     })
-    app.http('v1/order/set', { goods: list }, "POST").then(res => {
+    app.http('v1/order/set', { goods: goodsList }, "POST").then(res => {
       if (res.code == 200) {
-        app.http('v1/order/editCart', { list: listTotal }, "POST")
+        app.http('v1/order/editCart', { goodsList: listTotal }, "POST")
           .then(res => {
             console.log(res)
           })
@@ -171,43 +169,27 @@ Page({
     })
 
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  
+  onShow: function (options) {
+    let that = this;
+    wx.request({
+      url: 'http://localhost:8080/HandMadeMom/cart/getCartList',
+      method: 'GET',
+      header: { 'content-type': 'application/json' },
+      success: function (res) {
+        if (res.statusCode == 200) {
+          that.setData({ goodsList: res.data });
+        }
 
-  },
+        that.totalPrice()
+        console.log(res.data);
+      },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    app.http('v1/order/cartList').then(res => {
-      console.log(res.data)
-      let list = []
-      res.data.map((v, k) => {
-        list.push({
-          img: v.img,
-          num: v.num,
-          price: v.price,
-          spec: v.spec,
-          title: v.title,
-          id: v.id,
-          select: false
-        })
-      })
-      this.setData({
-        list: list,
-        total: false,
-        totalPrice: 0,
-      })
+      fail: function (res) {
+        console.log(res.data);
+      },
     })
+
+
   },
 })
