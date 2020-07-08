@@ -42,7 +42,7 @@ Page({
   },
 
   labelFun(e) {//单选
-    let that = this
+    let that = this;
     let num = 0
     for (let i = 0; i < that.data.goodsList.length; i++) {
       if (that.data.goodsList[i].goodsId == e.currentTarget.dataset.goodsid) {
@@ -74,76 +74,90 @@ Page({
       isEdit: !this.data.isEdit
     })
 
-    if (!this.data.isEdit) {
-      console.log(this.data.goodsList)
-      app.http('v1/order/editCart', { goodsList: this.data.goodsList }, "POST")
-        .then(res => {
-          console.log(res)
-        })
-    }
+    wx.request({
+      url: 'http://localhost:8080/HandMadeMom/cart/updateCartList',
+      data: {
+        goodsList: this.data.goodsList,
+      },
+      method: 'POST',
+      header: { 'content-type': 'application/json' },
+      success: function (res) {
+        console.log(res.data);
+      },
+
+      fail: function (res) {
+        console.log(res.data);
+      },
+    })
   },
 
-  plusFun(item) { //增加商品数量
-    this.data.goodsList.map((v, k) => {
-      if (v.id == item.target.dataset.item.id) {
-        this.data.goodsList[k].num++
-      }
-    })
+  plusFun(e) { //增加商品数量
+    let that = this;
+    for (let i = 0; i < that.data.goodsList.length; i++) {
+      if (that.data.goodsList[i].goodsId == e.currentTarget.dataset.goodsid) {
+        if ((that.data.goodsList[i].goodsBuyNum + 1) <= that.data.goodsList[i].goodsRemainNum) {
+          that.data.goodsList[i].goodsBuyNum++;
 
-    this.setData({
-      goodsList: this.data.goodsList
-    })
+          that.setData({
+            goodsList: that.data.goodsList
+          })
 
-    this.totalPrice()
-  },
-
-  reduceFun(item) { //减少商品数量
-    this.data.goodsList.map((v, k) => {
-      if (v.id == item.target.dataset.item.id) {
-        if (this.data.goodsList[k].num > 1) {
-          this.data.goodsList[k].num--
         }
       }
-    })
-    this.setData({
-      goodsList: this.data.goodsList
-    })
+    }
 
-    this.totalPrice()
+    this.totalPrice();
   },
 
-  delItemFun(item) { //删除单商品
+  reduceFun(e) { //减少商品数量
+    let that = this;
+    for (let i = 0; i < that.data.goodsList.length; i++) {
+      if (that.data.goodsList[i].goodsId == e.currentTarget.dataset.goodsid) {
+        if ((that.data.goodsList[i].goodsBuyNum - 1) > 0)
+        {
+          that.data.goodsList[i].goodsBuyNum--;
 
-    let id = item.target ? item.target.dataset.item.id : item.id
+          that.setData({
+            goodsList: that.data.goodsList
+          })
 
-    this.data.goodsList.map((v, k) => {
-      if (v.id == id) {
-        this.data.goodsList.splice(k, 1)
+        }
       }
-    })
+    }
 
-    this.setData({
-      goodsList: this.data.goodsList
-    })
+    this.totalPrice();
+  },
+
+  delItemFun(e) { //删除单商品
+    let that = this;
+    for (let i = 0; i < that.data.goodsList.length; i++) {
+      if (that.data.goodsList[i].goodsId == e.currentTarget.dataset.goodsid) {
+        that.data.goodsList.splice(i, 1);
+
+        that.setData({
+          goodsList: this.data.goodsList
+        })
+      }
+    }
 
     this.totalPrice()
   },
 
   delFun() { //选中删除
     let goodsList = []
+    let that = this;
 
-    this.data.goodsList.map((v, k) => {
-      if (!v.goodsSelect) {
-        goodsList.push(v)
+    for (let i = 0; i < that.data.goodsList.length; i++) {
+      if (!that.data.goodsList[i].goodsSelect) {
+        goodsList.push(that.data.goodsList[i]);
       }
-    })
+    }
 
     this.setData({
       goodsList: goodsList
     })
 
-    this.totalPrice()
-
+    this.totalPrice();
   },
   
   closeFun: function () {

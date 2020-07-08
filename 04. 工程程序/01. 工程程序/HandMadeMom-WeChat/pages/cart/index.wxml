@@ -35,9 +35,9 @@
         <image src='{{item.goodsImgUrl}}'></image>
         <view class='text'>
           <view class='title'>
-            <text class='{{item.goodsBuyNum==1?"prohibit":""}}' bindtap='reduceFun' data-item="{{item}}">-</text>
+            <text class='{{item.goodsBuyNum==1?"prohibit":""}}' bindtap='reduceFun' data-goodsid="{{item.goodsId}}">-</text>
             <input type="number" value='{{item.goodsBuyNum}}'></input>
-            <text bindtap='plusFun' data-item="{{item}}">+</text>
+            <text class='{{item.goodsBuyNum==item.goodsRemainNum?"prohibit":""}}'bindtap='plusFun' data-goodsid="{{item.goodsId}}">+</text>
           </view>
           <view class='spec'>{{item.goodsSpec}}</view>
           <view class='price'>
@@ -45,7 +45,7 @@
           </view>
         </view>
       </view>
-      <view class='del-btn' bindtap='delItemFun' data-item="{{item}}">删除</view>
+      <view class='del-btn' bindtap='delItemFun' data-goodsid="{{item.goodsId}}">删除</view>
     </view>
   </scroll-view>
   <view class='bottom' style='height:10vh'>
