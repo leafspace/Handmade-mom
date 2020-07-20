@@ -35,7 +35,7 @@ public class HomeAddCartServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("≤˙∆∑ID£∫" + request.getParameter("goodsId"));
+		System.out.println("‰∫ßÂìÅIDÔºö" + request.getParameter("goodsId"));
 		response.getWriter().append("Hello World");
 	}
 

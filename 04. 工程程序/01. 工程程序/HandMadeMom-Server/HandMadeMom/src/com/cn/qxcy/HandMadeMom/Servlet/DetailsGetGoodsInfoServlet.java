@@ -31,7 +31,7 @@ public class DetailsGetGoodsInfoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		GoodsInfo goodsInfo = new GoodsInfo("ÉÌÆ·Ãû³ÆABCDEFG", "GOOD", 8, 3235, 999, "ÉÌÆ·ÏêÇé", "ÖÆ×÷½Ì³Ì");
+		GoodsInfo goodsInfo = new GoodsInfo("å•†å“åç§°ABCDEFG", "GOOD", 8, 3235, 999, "å•†å“è¯¦æƒ…", "åˆ¶ä½œæ•™ç¨‹");
 		VedioUrls vedioUrls = new VedioUrls("", "http://localhost:8080/HandMadeMom/media/vedio/WIN_20200702_19_55_16_Pro.mp4");
 		goodsInfo.setGoodsDetailsVedioUrls(vedioUrls);
 		goodsInfo.setGoodsTotorialVedioUrls(vedioUrls);
@@ -42,7 +42,7 @@ public class DetailsGetGoodsInfoServlet extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		response.getWriter().append(strRet);
 		
-		System.out.println("²úÆ·ID£º" + request.getParameter("goodsId"));
+		System.out.println("äº§å“IDï¼š" + request.getParameter("goodsId"));
 	}
 
 	/**

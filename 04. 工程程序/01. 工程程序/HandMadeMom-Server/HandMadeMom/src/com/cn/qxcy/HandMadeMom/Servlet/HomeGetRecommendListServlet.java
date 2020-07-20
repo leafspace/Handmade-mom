@@ -32,11 +32,11 @@ public class HomeGetRecommendListServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		RecommendListItem ItemA = new RecommendListItem(1, 1, "", "ﾍﾆｼﾌﾆｷA", "/img/goods.png", 999);
-		RecommendListItem ItemB = new RecommendListItem(2, 1, "", "ﾍﾆｼﾌﾆｷB", "/img/goods.png", 888);
-		RecommendListItem ItemC = new RecommendListItem(3, 1, "", "ﾍﾆｼﾌﾆｷC", "/img/goods.png", 777);
-		RecommendListItem ItemD = new RecommendListItem(4, 1, "", "ﾍﾆｼﾌﾆｷD", "/img/goods.png", 666);
-		RecommendListItem ItemE = new RecommendListItem(5, 1, "", "ﾍﾆｼﾌﾆｷE", "/img/goods.png", 555);
+		RecommendListItem ItemA = new RecommendListItem(1, 1, "", "謗ｨ闕仙膚蜩、", "/img/goods.png", 999);
+		RecommendListItem ItemB = new RecommendListItem(2, 1, "", "謗ｨ闕仙膚蜩。", "/img/goods.png", 888);
+		RecommendListItem ItemC = new RecommendListItem(3, 1, "", "謗ｨ闕仙膚蜩，", "/img/goods.png", 777);
+		RecommendListItem ItemD = new RecommendListItem(4, 1, "", "謗ｨ闕仙膚蜩．", "/img/goods.png", 666);
+		RecommendListItem ItemE = new RecommendListItem(5, 1, "", "謗ｨ闕仙膚蜩・", "/img/goods.png", 555);
 		
 		ArrayList<RecommendListItem> recommendList = new ArrayList<RecommendListItem>();
 		recommendList.add(ItemA);

@@ -32,9 +32,9 @@ public class CartGetCartListServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		CardListGoodsInfo goodsInfoA = new CardListGoodsInfo("商品名称A", "GOOD", 8, 3235, 999, "商品详情", "制作教程");
-		CardListGoodsInfo goodsInfoB = new CardListGoodsInfo("商品名称B", "GOOD", 8, 3235, 888, "商品详情", "制作教程");
-		CardListGoodsInfo goodsInfoC = new CardListGoodsInfo("商品名称C", "GOOD", 8, 3235, 777, "商品详情", "制作教程");
+		CardListGoodsInfo goodsInfoA = new CardListGoodsInfo("鍟嗗搧鍚嶇ОA", "GOOD", 8, 3235, 999, "鍟嗗搧璇︽儏", "鍒朵綔鏁欑▼");
+		CardListGoodsInfo goodsInfoB = new CardListGoodsInfo("鍟嗗搧鍚嶇ОB", "GOOD", 8, 3235, 888, "鍟嗗搧璇︽儏", "鍒朵綔鏁欑▼");
+		CardListGoodsInfo goodsInfoC = new CardListGoodsInfo("鍟嗗搧鍚嶇ОC", "GOOD", 8, 3235, 777, "鍟嗗搧璇︽儏", "鍒朵綔鏁欑▼");
 		
 		goodsInfoA.setGoodsId(1);
 		goodsInfoB.setGoodsId(2);
