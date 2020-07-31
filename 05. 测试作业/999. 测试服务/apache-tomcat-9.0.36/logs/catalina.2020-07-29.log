@@ -1,0 +1,40 @@
+29-Jul-2020 21:35:58.794 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/9.0.36
+29-Jul-2020 21:35:58.799 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jun 3 2020 17:07:09 UTC
+29-Jul-2020 21:35:58.799 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     9.0.36.0
+29-Jul-2020 21:35:58.801 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+29-Jul-2020 21:35:58.801 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+29-Jul-2020 21:35:58.801 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+29-Jul-2020 21:35:58.801 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files\Java\jdk-14.0.1
+29-Jul-2020 21:35:58.801 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    14.0.1+7
+29-Jul-2020 21:35:58.802 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+29-Jul-2020 21:35:58.802 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36
+29-Jul-2020 21:35:58.802 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36
+29-Jul-2020 21:35:58.808 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.lang=ALL-UNNAMED
+29-Jul-2020 21:35:58.813 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.io=ALL-UNNAMED
+29-Jul-2020 21:35:58.813 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+29-Jul-2020 21:35:58.813 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\conf\logging.properties
+29-Jul-2020 21:35:58.814 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+29-Jul-2020 21:35:58.814 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+29-Jul-2020 21:35:58.814 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+29-Jul-2020 21:35:58.815 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+29-Jul-2020 21:35:58.815 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36
+29-Jul-2020 21:35:58.815 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36
+29-Jul-2020 21:35:58.816 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\temp
+29-Jul-2020 21:35:58.816 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 使用APR版本[1.7.0]加载了基于APR的Apache Tomcat本机库[1.2.24]。
+29-Jul-2020 21:35:58.817 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR功能：IPv6[true]、sendfile[true]、accept filters[false]、random[true]。
+29-Jul-2020 21:35:58.817 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL配置：useAprConnector[false]，useOpenSSL[true]
+29-Jul-2020 21:35:58.821 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL成功初始化 [OpenSSL 1.1.1g  21 Apr 2020]
+29-Jul-2020 21:35:59.070 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+29-Jul-2020 21:35:59.181 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[582]毫秒内初始化
+29-Jul-2020 21:35:59.228 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+29-Jul-2020 21:35:59.229 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.36]
+29-Jul-2020 21:35:59.243 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\docs]
+29-Jul-2020 21:35:59.568 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\docs]的部署已在[325]毫秒内完成
+29-Jul-2020 21:35:59.571 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\examples]
+29-Jul-2020 21:36:00.090 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\examples]的部署已在[519]毫秒内完成
+29-Jul-2020 21:36:00.094 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\host-manager]
+29-Jul-2020 21:36:00.137 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\host-manager]的部署已在[44]毫秒内完成
+29-Jul-2020 21:36:00.140 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\ROOT]
+29-Jul-2020 21:36:00.176 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[C:\Users\leafspace\Documents\GitHub\Handmade-mom\05. 测试作业\999. 测试服务\apache-tomcat-9.0.36\webapps\ROOT]的部署已在[36]毫秒内完成
+29-Jul-2020 21:36:00.184 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+29-Jul-2020 21:36:00.197 信息 [main] org.apache.catalina.startup.Catalina.start [1,015]毫秒后服务器启动
